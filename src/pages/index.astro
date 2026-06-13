@@ -1,17 +1,305 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <!-- ── HERO ── -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-brand-50/60 to-white pointer-events-none" />
+    <div class="relative mx-auto max-w-6xl px-6 pt-16 sm:pt-24 pb-24 sm:pb-32">
+      <div class="max-w-2xl">
+        <span class="inline-flex items-center gap-1.5 rounded-full bg-brand-50 px-3 py-1 text-xs font-medium text-brand-700 tracking-wide uppercase">WordPress Full Site Editing</span>
+        <h1 class="mt-6 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900 leading-[1.08]">
+          Stop hunting.<br />
+          <span class="text-brand-500">Start editing.</span>
+        </h1>
+        <p class="mt-5 sm:mt-6 text-base sm:text-lg text-gray-600 leading-relaxed max-w-xl">
+          The first plugin that searches every WordPress FSE layer — Templates, Template Parts, Patterns, Navigation, and Posts — and takes you straight to the edit screen. No more "Where do I edit this?"
+        </p>
+        <div class="mt-7 sm:mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+          <a href="https://wordpress.org/plugins/content-finder" class="inline-flex items-center gap-2 rounded-full bg-gray-900 px-6 py-3 text-sm font-semibold text-white hover:bg-gray-800 transition-colors w-full sm:w-auto justify-center">
+            Download Free
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="#how" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">See how it works →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROBLEM ── -->
+  <section class="border-t border-gray-100">
+    <div class="mx-auto max-w-6xl px-6 py-16 sm:py-24">
+      <div class="max-w-2xl">
+        <span class="text-xs font-semibold tracking-widest text-gray-400 uppercase">The Problem</span>
+        <h2 class="mt-4 text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">"Where do I edit this?"</h2>
+        <p class="mt-4 text-gray-600 leading-relaxed text-base sm:text-lg">
+          Full Site Editing in WordPress 7.0 spreads content across <strong class="text-gray-900">5 different layers</strong> — Posts, Templates, Template Parts, Synced Patterns, and Navigation. The default WordPress search only finds posts and pages.
+        </p>
+        <p class="mt-3 text-gray-600 leading-relaxed text-sm sm:text-base">
+          That means a simple text change can take 15 minutes of clicking through menus, guessing where something lives, and praying you found the right spot. Agency developers waste hours on this every week.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SOLUTION: 5 LAYERS ── -->
+  <section class="border-t border-gray-100 bg-gray-50/40">
+    <div class="mx-auto max-w-6xl px-6 py-16 sm:py-24">
+      <div class="max-w-2xl">
+        <span class="text-xs font-semibold tracking-widest text-gray-400 uppercase">What It Finds</span>
+        <h2 class="mt-4 text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">Every layer. One search.</h2>
+        <p class="mt-4 text-gray-600 leading-relaxed">
+          Content Finder indexes all 5 FSE content layers simultaneously. Type once, find everywhere.
+        </p>
+      </div>
+
+      <div class="mt-10 sm:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-gray-200 rounded-xl overflow-hidden">
+        <!-- Posts -->
+        <div class="bg-white px-5 sm:px-6 py-8 sm:py-10">
+          <div class="w-10 h-10 rounded-lg bg-brand-50 flex items-center justify-center text-brand-600 font-bold text-lg">P</div>
+          <h3 class="mt-4 font-semibold text-gray-900">Posts & Pages</h3>
+          <p class="mt-2 text-sm text-gray-500 leading-relaxed">Standard content, custom post types, pages — anything in wp_posts.</p>
+        </div>
+        <!-- Templates -->
+        <div class="bg-white px-5 sm:px-6 py-8 sm:py-10">
+          <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600 font-bold text-lg">T</div>
+          <h3 class="mt-4 font-semibold text-gray-900">Templates</h3>
+          <p class="mt-2 text-sm text-gray-500 leading-relaxed">Block templates (wp_template) that define page layouts.</p>
+        </div>
+        <!-- Template Parts -->
+        <div class="bg-white px-5 sm:px-6 py-8 sm:py-10">
+          <div class="w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-600 font-bold text-lg">TP</div>
+          <h3 class="mt-4 font-semibold text-gray-900">Template Parts</h3>
+          <p class="mt-2 text-sm text-gray-500 leading-relaxed">Headers, footers, sidebars — reusable across templates.</p>
+        </div>
+        <!-- Patterns -->
+        <div class="bg-white px-5 sm:px-6 py-8 sm:py-10">
+          <div class="w-10 h-10 rounded-lg bg-amber-50 flex items-center justify-center text-amber-600 font-bold text-lg">P</div>
+          <h3 class="mt-4 font-semibold text-gray-900">Synced Patterns</h3>
+          <p class="mt-2 text-sm text-gray-500 leading-relaxed">Reusable block content (wp_block) that syncs everywhere.</p>
+        </div>
+        <!-- Navigation -->
+        <div class="bg-white px-5 sm:px-6 py-8 sm:py-10">
+          <div class="w-10 h-10 rounded-lg bg-rose-50 flex items-center justify-center text-rose-600 font-bold text-lg">N</div>
+          <h3 class="mt-4 font-semibold text-gray-900">Navigation</h3>
+          <p class="mt-2 text-sm text-gray-500 leading-relaxed">Menu items and links hidden in the Navigation screen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOW IT WORKS ── -->
+  <section id="how" class="border-t border-gray-100">
+    <div class="mx-auto max-w-6xl px-6 py-16 sm:py-24">
+      <div class="max-w-2xl">
+        <span class="text-xs font-semibold tracking-widest text-gray-400 uppercase">How It Works</span>
+        <h2 class="mt-4 text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">Three steps to find anything.</h2>
+      </div>
+
+      <div class="mt-10 sm:mt-12 space-y-12 sm:space-y-16">
+        <div class="flex items-start gap-4 sm:gap-8">
+          <span class="text-3xl sm:text-5xl font-bold text-brand-200 leading-none shrink-0">01</span>
+          <div>
+            <h3 class="text-lg sm:text-xl font-semibold text-gray-900">Search</h3>
+            <p class="mt-2 text-sm sm:text-base text-gray-600 leading-relaxed max-w-xl">Type any text — a phone number, a headline, a footer link. Content Finder instantly searches across all 5 FSE layers in real-time.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 sm:gap-8">
+          <span class="text-3xl sm:text-5xl font-bold text-brand-200 leading-none shrink-0">02</span>
+          <div>
+            <h3 class="text-lg sm:text-xl font-semibold text-gray-900">See where it lives</h3>
+            <p class="mt-2 text-sm sm:text-base text-gray-600 leading-relaxed max-w-xl">Each result shows exactly which layer it came from — Template, Pattern, Navigation, Post. No more guessing.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 sm:gap-8">
+          <span class="text-3xl sm:text-5xl font-bold text-brand-200 leading-none shrink-0">03</span>
+          <div>
+            <h3 class="text-lg sm:text-xl font-semibold text-gray-900">Edit in one click</h3>
+            <p class="mt-2 text-sm sm:text-base text-gray-600 leading-relaxed max-w-xl">Click any result and jump directly to the correct editor — Site Editor, Block Editor, Navigation Screen. Change made.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SCREENSHOT / SEE IT IN ACTION ── -->
+  <section class="border-t border-gray-100">
+    <div class="mx-auto max-w-6xl px-6 py-16 sm:py-24">
+      <div class="max-w-2xl">
+        <span class="text-xs font-semibold tracking-widest text-gray-400 uppercase">See It In Action</span>
+        <h2 class="mt-4 text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">One search across all layers.</h2>
+        <p class="mt-4 text-gray-600 leading-relaxed">
+          Type any text — Content Finder instantly searches Templates, Template Parts, Patterns, Navigation, and Posts. Filter by type to narrow results. Every result shows match count, layer label, and a direct edit link.
+        </p>
+      </div>
+
+      <div class="mt-8 sm:mt-10 -mx-6 sm:mx-0">
+        <div class="relative rounded-xl border border-gray-200 bg-white shadow-sm overflow-hidden">
+          <img src="/screenshots/search-results.png" alt="Content Finder search results showing matches across WordPress FSE layers" class="w-full h-auto" />
+          <div class="absolute top-2 sm:top-4 left-2 sm:left-4 flex items-center gap-1.5">
+            <span class="inline-flex items-center gap-1 rounded-md bg-white/80 backdrop-blur-sm border border-gray-200 px-1.5 sm:px-2 py-0.5 sm:py-1 text-[10px] sm:text-xs font-medium text-gray-600 shadow-sm">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="sm:w-[12px] sm:h-[12px]"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              Searching for "WordPress"
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 sm:mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+        <div class="flex items-start gap-3">
+          <span class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="text-green-600"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div>
+            <p class="text-sm font-medium text-gray-900">2 results found</p>
+            <p class="text-xs text-gray-500 mt-0.5">One in Posts, one in Pages</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="text-green-600"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div>
+            <p class="text-sm font-medium text-gray-900">Layer labels</p>
+            <p class="text-xs text-gray-500 mt-0.5">See at a glance where content lives</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="text-green-600"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div>
+            <p class="text-sm font-medium text-gray-900">One-click edit</p>
+            <p class="text-xs text-gray-500 mt-0.5">Jump straight to the right editor</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURES ── -->
+  <section id="features" class="border-t border-gray-100 bg-gray-50/40">
+    <div class="mx-auto max-w-6xl px-6 py-16 sm:py-24">
+      <div class="max-w-2xl">
+        <span class="text-xs font-semibold tracking-widest text-gray-400 uppercase">Features</span>
+        <h2 class="mt-4 text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">Everything you need to master FSE content.</h2>
+      </div>
+
+      <div class="mt-10 sm:mt-12 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-8 sm:gap-y-10">
+        <div>
+          <h3 class="font-semibold text-gray-900">Universal search</h3>
+          <p class="mt-1.5 text-sm text-gray-500 leading-relaxed">Search all content layers at once — no more switching between screens.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-900">Layer labels</h3>
+          <p class="mt-1.5 text-sm text-gray-500 leading-relaxed">Every result shows its origin: Template, Pattern, Navigation, Post, or Template Part.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-900">One-click editing</h3>
+          <p class="mt-1.5 text-sm text-gray-500 leading-relaxed">Direct links to the correct editor — Site Editor, Block Editor, or Navigation Screen.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-900">Keyboard-first</h3>
+          <p class="mt-1.5 text-sm text-gray-500 leading-relaxed">Press <kbd class="inline-flex items-center rounded border border-gray-200 bg-gray-50 px-1.5 py-0.5 text-[11px] sm:text-xs font-mono text-gray-600">Ctrl+K</kbd> or <kbd class="inline-flex items-center rounded border border-gray-200 bg-gray-50 px-1.5 py-0.5 text-[11px] sm:text-xs font-mono text-gray-600">Cmd+K</kbd> to open the Command Palette and search without touching your mouse.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-900">Type filters</h3>
+          <p class="mt-1.5 text-sm text-gray-500 leading-relaxed">Filter results by content type — show only Templates, only Patterns, or any combination. Zero in on exactly what you need.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-900">Search & Replace</h3>
+          <p class="mt-1.5 text-sm text-gray-500 leading-relaxed">Pro feature: preview every editable match <strong class="text-gray-700">before</strong> you replace. See what changes, confirm, and update across all layers safely.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PRICING ── -->
+  <section id="pricing" class="border-t border-gray-100">
+    <div class="mx-auto max-w-6xl px-6 py-16 sm:py-24">
+      <div class="max-w-2xl">
+        <span class="text-xs font-semibold tracking-widest text-gray-400 uppercase">Pricing</span>
+        <h2 class="mt-4 text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">Free to start. Pro when you need power.</h2>
+      </div>
+
+      <div class="mt-10 sm:mt-12 grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-px bg-gray-200 rounded-xl overflow-hidden">
+        <div class="bg-white px-6 sm:px-8 py-10 sm:py-12">
+          <h3 class="text-lg font-semibold text-gray-900">Free</h3>
+          <p class="mt-1 text-sm text-gray-500">Everything you need to find content on any FSE site.</p>
+          <div class="mt-6">
+            <span class="text-3xl sm:text-4xl font-bold text-gray-900">$0</span>
+            <span class="text-gray-500 text-sm ml-1">forever</span>
+          </div>
+          <ul class="mt-6 space-y-3 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-green-500 shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Search all 5 FSE layers
+            </li>
+            <li class="flex items-start gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-green-500 shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Layer labels on every result
+            </li>
+            <li class="flex items-start gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-green-500 shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+              One-click edit links
+            </li>
+            <li class="flex items-start gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-green-500 shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Command Palette (Ctrl+K)
+            </li>
+            <li class="flex items-start gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-green-500 shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Type filters to narrow results
+            </li>
+          </ul>
+          <a href="https://wordpress.org/plugins/content-finder" class="mt-8 inline-flex items-center gap-2 rounded-full border border-gray-300 px-5 py-2.5 text-sm font-semibold text-gray-900 hover:bg-gray-50 transition-colors w-full sm:w-auto justify-center">Download Free</a>
+        </div>
+        <div class="bg-gray-900 px-6 sm:px-8 py-10 sm:py-12 text-white">
+          <h3 class="text-lg font-semibold">Pro</h3>
+          <p class="mt-1 text-sm text-gray-400">For agencies and power users who need bulk operations.</p>
+          <div class="mt-6">
+            <span class="text-3xl sm:text-4xl font-bold">$49</span>
+            <span class="text-gray-400 text-sm ml-1">/year — single site</span>
+          </div>
+          <p class="mt-1 text-sm text-gray-400">$99/year — agency (up to 10 sites)</p>
+          <ul class="mt-6 space-y-3 text-sm text-gray-300">
+            <li class="flex items-start gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-400 shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Everything in Free, plus:
+            </li>
+            <li class="flex items-start gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-400 shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Search & Replace across all layers
+            </li>
+            <li class="flex items-start gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-400 shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Preview-first replace workflow
+            </li>
+            <li class="flex items-start gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-400 shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Type filters
+            </li>
+            <li class="flex items-start gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-400 shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Priority support
+            </li>
+          </ul>
+          <a href="https://weux.studio/content-finder-pro" class="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-gray-900 hover:bg-gray-100 transition-colors w-full sm:w-auto justify-center">Get Pro</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <section class="border-t border-gray-100 bg-brand-50/50">
+    <div class="mx-auto max-w-6xl px-6 py-16 sm:py-24 text-center">
+      <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">Stop asking "Where do I edit this?"</h2>
+      <p class="mt-4 text-base sm:text-lg text-gray-600 max-w-lg mx-auto">Install Content Finder Free on your WordPress site. Find anything in seconds.</p>
+      <a href="https://wordpress.org/plugins/content-finder" class="mt-8 inline-flex items-center gap-2 rounded-full bg-gray-900 px-6 py-3 text-sm font-semibold text-white hover:bg-gray-800 transition-colors w-full sm:w-auto justify-center">
+        Download Free from WP.org
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+</Layout>
