@@ -5,8 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://weuxstudio.github.io',
-  base: '/content-finder-site',
+  site: 'https://contentfinderwp.com',
   vite: {
     plugins: [tailwindcss()]
   }
