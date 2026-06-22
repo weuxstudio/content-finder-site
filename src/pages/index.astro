@@ -1,163 +1,573 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-const baseUrl = import.meta.env.BASE_URL;
 ---
 
-<Layout title="Content Finder - Coming Soon" description="Content Finder is coming soon. Find and edit WordPress content across every Full Site Editing layer faster.">
-  <main class="min-h-[calc(100vh-5rem)] overflow-hidden bg-white text-slate-950">
-    <section class="relative isolate flex min-h-[calc(100vh-5rem)] items-center">
-      <div class="soft-grid absolute inset-0 -z-20"></div>
-      <div class="ambient-sweep absolute inset-x-0 top-0 -z-10 h-72"></div>
-      <div class="absolute left-1/2 top-16 -z-10 h-72 w-72 -translate-x-1/2 rounded-full bg-cyan-200/20 blur-3xl"></div>
+<Layout title="WEUX Content Finder - Find and fix WordPress content faster" description="Search across posts, pages, custom post types, templates, patterns, navigation, Elementor data, and ACF fields from one WordPress admin screen.">
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a href="#" class="nav-logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <span>WEUX Content Finder</span>
+      </a>
+      <div class="nav-menu">
+        <a href="#problem" class="nav-link">Problem</a>
+        <a href="#coverage" class="nav-link">Coverage</a>
+        <a href="#pro" class="nav-link">Pro</a>
+        <a href="#comparison" class="nav-link">Free vs Pro</a>
+        <a href="#usecases" class="nav-link">Use Cases</a>
+      </div>
+      <div class="nav-cta">
+        <a href="#comparison" class="btn btn-outline">Compare</a>
+        <a href="#download" class="btn btn-dark">Get Free</a>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Toggle navigation">☰</button>
+    </div>
+  </nav>
 
-      <div class="mx-auto grid w-full max-w-6xl items-center gap-14 px-6 py-16 sm:py-20 lg:grid-cols-[1.04fr_0.96fr] lg:py-24">
-        <div class="reveal max-w-2xl">
-          <a href={baseUrl} class="group inline-flex items-center gap-3" aria-label="Content Finder home">
-            <span class="logo-mark relative flex h-14 w-14 items-center justify-center rounded-[1.15rem] bg-slate-950 text-white shadow-2xl shadow-cyan-500/20">
-              <svg viewBox="0 0 64 64" aria-hidden="true" class="h-9 w-9">
-                <path d="M16 18.5C16 15.5 18.5 13 21.5 13h17C41.5 13 44 15.5 44 18.5v7.75" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
-                <path d="M21 26.5C21 23.5 23.5 21 26.5 21h17C46.5 21 49 23.5 49 26.5v7" fill="none" stroke="#5eead4" stroke-width="4" stroke-linecap="round" />
-                <circle cx="30.5" cy="34.5" r="12.5" fill="none" stroke="currentColor" stroke-width="4.5" />
-                <path d="m40.5 44.5 8.5 8.5" stroke="#38bdf8" stroke-width="5" stroke-linecap="round" />
-              </svg>
-              <span class="logo-shine absolute inset-0 rounded-[1.15rem]"></span>
-            </span>
-            <span class="flex flex-col leading-none">
-              <span class="text-xl font-semibold tracking-tight text-slate-950">Content Finder</span>
-              <span class="mt-1 text-xs font-medium uppercase tracking-[0.28em] text-cyan-700">WordPress FSE</span>
-            </span>
-          </a>
-
-          <h1 class="mt-12 max-w-3xl text-5xl font-semibold tracking-tight text-slate-950 sm:text-6xl lg:text-7xl">
-            Coming Soon
-          </h1>
-          <p class="mt-6 max-w-xl text-lg leading-8 text-slate-600">
-            The fastest way to find hidden WordPress content across templates, template parts, patterns, navigation, and posts is almost ready.
-          </p>
-
-          <form id="notify-form" class="mt-9 flex w-full max-w-xl flex-col gap-3 rounded-[1.4rem] border border-slate-200 bg-white/85 p-2 shadow-2xl shadow-slate-200/70 backdrop-blur sm:flex-row" novalidate>
-            <label class="sr-only" for="email">Email address</label>
-            <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required placeholder="your@email.com" aria-describedby="notify-feedback" class="min-h-12 flex-1 rounded-2xl border-0 bg-transparent px-4 text-sm font-medium text-slate-900 outline-none placeholder:text-slate-400 focus-visible:ring-2 focus-visible:ring-cyan-300" />
-            <button id="notify-submit" type="submit" class="inline-flex min-h-12 items-center justify-center gap-2 rounded-2xl bg-slate-950 px-5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow-lg hover:shadow-cyan-500/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500 disabled:cursor-not-allowed disabled:opacity-70">
-              Notify me
-              <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4">
-                <path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </button>
-          </form>
-          <p id="notify-feedback" class="notify-feedback mt-3 hidden max-w-xl rounded-2xl px-4 py-3 text-sm font-medium" aria-live="polite"></p>
-
-          <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-slate-500">
-            <span class="inline-flex items-center gap-2">
-              <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
-              Private beta in progress
-            </span>
+  <section class="hero round-bottom bg-white" id="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-inner fade-up">
+          <h1 class="h-hero"><span class="text-blue">Find</span> and <span class="text-blue">fix</span><br />WordPress <span class="text-blue">content</span><br />faster.</h1>
+          <p class="hero-sub">Search across posts, pages, custom post types, templates, template parts, navigation, synced patterns, block theme files, Elementor data, and supported ACF fields — from one WordPress admin screen. Jump straight to the right editor, or use Pro to preview, replace, and undo changes safely.</p>
+          <div class="hero-ctas">
+            <a href="#download" class="btn btn-blue btn-lg">Download Free Plugin →</a>
+            <a href="#comparison" class="btn btn-outline btn-lg">Compare Free and Pro</a>
+          </div>
+          <div class="hero-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Runs inside WordPress</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> No external service</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Editor-focused results</span>
           </div>
         </div>
 
-        <div class="reveal reveal-delay relative mx-auto w-full max-w-[31rem] lg:mr-0">
-          <div class="preview-float relative rounded-[2rem] border border-slate-200 bg-white p-4 shadow-2xl shadow-slate-200/80">
-            <div class="rounded-[1.45rem] border border-slate-100 bg-slate-50/80 p-4">
-              <div class="flex items-center justify-between border-b border-slate-200 pb-4">
-                <div class="flex items-center gap-2">
-                  <span class="h-3 w-3 rounded-full bg-rose-300"></span>
-                  <span class="h-3 w-3 rounded-full bg-amber-300"></span>
-                  <span class="h-3 w-3 rounded-full bg-emerald-300"></span>
-                </div>
-                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Search all layers</span>
+        <div class="mockup-wrap fade-up" style="animation-delay:.15s">
+          <div class="mockup">
+            <div class="mockup-bar">
+              <span class="d r"></span><span class="d y"></span><span class="d g"></span>
+              <span class="url">wp-admin → Content Finder</span>
+            </div>
+            <div class="mockup-body">
+              <div class="mockup-search">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+                <input type="text" value="old brand name" readonly />
+                <span class="kbd">⌘ K</span>
               </div>
-
-              <div class="mt-5 rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
-                <div class="flex items-center gap-3">
-                  <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5 text-cyan-600">
-                    <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.2" />
-                    <path d="m16.5 16.5 4 4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
-                  </svg>
-                  <span class="text-sm font-medium text-slate-900">footer phone number</span>
-                </div>
+              <div class="mockup-filters">
+                <span class="mf active">All (14)</span><span class="mf">Pages (5)</span><span class="mf">Templates (3)</span><span class="mf">Patterns (2)</span><span class="mf">Elementor (3)</span><span class="mf">ACF (1)</span>
               </div>
-
-              <div class="mt-5 space-y-3">
-                {[
-                  ['Template Part', 'Footer', '3 matches'],
-                  ['Navigation', 'Primary menu', '1 match'],
-                  ['Pattern', 'Contact banner', '2 matches'],
-                ].map(([type, title, count]) => (
-                  <div class="result-row flex items-center justify-between rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-                    <div>
-                      <p class="text-sm font-semibold text-slate-950">{title}</p>
-                      <p class="mt-1 text-xs font-medium uppercase tracking-[0.18em] text-cyan-700">{type}</p>
-                    </div>
-                    <span class="rounded-full bg-cyan-50 px-3 py-1 text-xs font-semibold text-cyan-700">{count}</span>
-                  </div>
-                ))}
+              <div class="mockup-results">
+                <div class="mr"><span class="type page">Page</span><span class="snip">About Us — <mark>old brand name</mark> is a creative agency…</span><span class="link">Edit →</span></div>
+                <div class="mr"><span class="type tpl">Template</span><span class="snip">header.html — <mark>old brand name</mark> footer text</span><span class="link">Site Editor →</span></div>
+                <div class="mr"><span class="type pat">Pattern</span><span class="snip">cta-section — <mark>old brand name</mark> call to action</span><span class="link">Edit →</span></div>
+                <div class="mr"><span class="type el">Elementor</span><span class="snip">Homepage — <mark>old brand name</mark> hero heading</span><span class="link">Edit in Elementor →</span></div>
+                <div class="mr"><span class="type menu">Menu</span><span class="snip">Footer Menu — <mark>old brand name</mark> link label</span><span class="link">Edit →</span></div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section" id="problem">
+    <div class="wrap problem-grid">
+      <div>
+        <div class="reveal" style="margin-bottom:8px"><span class="eyebrow">The Problem</span></div>
+        <h2 class="h-section reveal" style="margin-bottom:20px">WordPress content is<br />scattered everywhere.</h2>
+        <p class="body-l reveal" style="max-width:560px;margin-bottom:0">Teams waste time clicking through editors, guessing where copy lives, or using database-level tools that don't point to the actual editing surface.</p>
+
+        <div class="problem-narrative reveal">
+          <p><strong>WEUX Content Finder is not a generic database search tool.</strong> It is an editor-focused content locator and safe replacement workflow that searches the content layers WordPress teams actually edit — and opens the best available editor for each result.</p>
+          <ul class="problem-list">
+            <li>Shows result type, match count, snippet, status, and modified date</li>
+            <li>Opens the best available editor — Site Editor, Elementor, or standard editors</li>
+            <li>Keeps free search local inside WordPress; no external service required</li>
+            <li>Separates discovery from mutation: Free finds, Pro changes with preview and undo</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="problem-map reveal">
+        <div class="problem-layer-list">
+          <div class="problem-layer">
+            <svg class="problem-layer-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h5"/></svg>
+            <p>Posts & Pages</p>
+          </div>
+          <div class="problem-layer">
+            <svg class="problem-layer-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/><path d="M8 3v18"/><path d="M16 3v18"/></svg>
+            <p>Custom Post Types</p>
+          </div>
+          <div class="problem-layer">
+            <svg class="problem-layer-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+            <p>Block Templates</p>
+          </div>
+          <div class="problem-layer">
+            <svg class="problem-layer-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg>
+            <p>Template Parts</p>
+          </div>
+          <div class="problem-layer">
+            <svg class="problem-layer-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10H7z"/><path d="M4 4h10"/><path d="M10 20h10"/><path d="M4 4v10"/><path d="M20 10v10"/></svg>
+            <p>Synced Patterns</p>
+          </div>
+          <div class="problem-layer">
+            <svg class="problem-layer-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h10"/><path d="M4 18h13"/><circle cx="18" cy="12" r="2"/><circle cx="20" cy="18" r="2"/></svg>
+            <p>Navigation Menus</p>
+          </div>
+          <div class="problem-layer">
+            <svg class="problem-layer-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3 4 7l4 4"/><path d="m16 3 4 4-4 4"/><path d="M4 17h16"/><path d="M8 21h8"/></svg>
+            <p>Block Theme Files</p>
+          </div>
+          <div class="problem-layer">
+            <svg class="problem-layer-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M7 9h.01"/><path d="M10 9h.01"/><path d="M13 9h.01"/><path d="M7 14h10"/></svg>
+            <p>Elementor Metadata</p>
+          </div>
+          <div class="problem-layer">
+            <svg class="problem-layer-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/><circle cx="8" cy="5" r="2"/><circle cx="15" cy="12" r="2"/><circle cx="10" cy="19" r="2"/></svg>
+            <p>ACF Fields</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-white round-top round-bottom" id="coverage">
+    <div class="wrap">
+      <div style="text-align:center;margin-bottom:48px" class="reveal">
+        <span class="eyebrow">Search Coverage</span>
+        <h2 class="h-section" style="margin-top:8px;margin-bottom:12px">Search the places content<br />actually lives.</h2>
+        <p class="body-l" style="max-width:540px;margin:0 auto">One search across every layer WordPress teams edit — with direct links to the right editor for each result.</p>
+      </div>
+      <div class="coverage-list">
+        <div class="cov-item reveal">
+          <svg class="cov-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h5"/></svg>
+          <div><h3>Posts & Pages</h3><p>Search all post and page content with highlighted match snippets.</p></div>
+        </div>
+        <div class="cov-item reveal">
+          <svg class="cov-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/><path d="M8 3v18"/><path d="M16 3v18"/></svg>
+          <div><h3>Custom Post Types</h3><p>Search all public custom post types automatically.</p></div>
+        </div>
+        <div class="cov-item reveal">
+          <svg class="cov-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+          <div><h3>Block Templates</h3><p>Search block templates and template parts. Open in Site Editor where possible.</p></div>
+        </div>
+        <div class="cov-item reveal">
+          <svg class="cov-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg>
+          <div><h3>Synced Patterns</h3><p>Search synced reusable patterns across the site.</p></div>
+        </div>
+        <div class="cov-item reveal">
+          <svg class="cov-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h10"/><path d="M4 18h13"/><circle cx="18" cy="12" r="2"/><circle cx="20" cy="18" r="2"/></svg>
+          <div><h3>Navigation Menus</h3><p>Search block navigation and classic menu items where the theme supports them.</p></div>
+        </div>
+        <div class="cov-item reveal">
+          <svg class="cov-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3 4 7l4 4"/><path d="m16 3 4 4-4 4"/><path d="M4 17h16"/><path d="M8 21h8"/></svg>
+          <div><h3>Block Theme Files</h3><p>Search templates/*.html, parts/*.html, and referenced patterns/*.php.</p></div>
+        </div>
+        <div class="cov-item reveal">
+          <svg class="cov-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 3 7l9 5 9-5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>
+          <div><h3>Elementor Data</h3><p>Search Elementor page data. Get Edit in Elementor links where detected.</p></div>
+        </div>
+        <div class="cov-item reveal">
+          <svg class="cov-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0l-7.2-7.2a2 2 0 0 1 0-2.8l7.2-7.2a2 2 0 0 1 2.8 0l7.2 7.2a2 2 0 0 1 0 2.8z"/><path d="M7 17 17 7"/></svg>
+          <div><h3>ACF Teaser</h3><p>Free shows a count-only teaser. Pro unlocks full supported-field search and replace.</p></div>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:32px;font-size:.9375rem;color:var(--ink-light)" class="reveal">Results don't just show matches — they point you to the best available editor target, including Site Editor links for block themes and Elementor edit links where possible.</p>
+    </div>
+  </section>
+
+  <section class="section support-section" id="builder-acf">
+    <div class="wrap support-grid">
+      <div class="reveal">
+        <span class="eyebrow">ACF & Builder Support</span>
+        <h2 class="h-section" style="margin-top:8px;margin-bottom:16px">Builder-aware search,<br />careful field handling.</h2>
+        <p class="body-l" style="max-width:520px">Elementor support is included in Free where detected. ACF stays careful by default: Free shows matching field counts, while Pro unlocks supported text-like field search and replace.</p>
+      </div>
+      <div class="support-list reveal">
+        <div class="support-item">
+          <svg class="support-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M7 9h.01"/><path d="M10 9h.01"/><path d="M13 9h.01"/><path d="M7 14h10"/></svg>
+          <div><h3>Elementor in Free</h3><p>Search Elementor page data and open Edit in Elementor links where safe editor targets are detected.</p></div>
+        </div>
+        <div class="support-item">
+          <svg class="support-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/><circle cx="8" cy="5" r="2"/><circle cx="15" cy="12" r="2"/><circle cx="10" cy="19" r="2"/></svg>
+          <div><h3>ACF in Free</h3><p>Show a count-only teaser when matching ACF fields exist, without exposing field values.</p></div>
+        </div>
+        <div class="support-item">
+          <svg class="support-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h7"/><path d="M4 12h10"/><path d="M4 17h7"/><path d="M17 8l3 3-3 3"/><path d="M20 11h-5"/></svg>
+          <div><h3>ACF in Pro</h3><p>Search and replace across supported text-like ACF fields with preview, selection, and undo.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="workflow">
+    <div class="wrap">
+      <div style="text-align:center;margin-bottom:48px" class="reveal">
+        <span class="eyebrow">How It Works</span>
+        <h2 class="h-section" style="margin-top:8px">Search, filter, inspect,<br />open editor.</h2>
+      </div>
+      <div class="flow reveal">
+        <div class="flow-step">
+          <div class="num"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4 4"/></svg></div>
+          <h3>Search</h3><p>Type any text. Search runs locally inside WordPress.</p>
+        </div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-step">
+          <div class="num"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M7 12h10"/><path d="M10 18h4"/></svg></div>
+          <h3>Filter</h3><p>Filter by result type — pages, templates, patterns, Elementor, and more.</p>
+        </div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-step">
+          <div class="num"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <h3>Inspect</h3><p>Review match snippets, type, count, status, and modified date.</p>
+        </div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-step">
+          <div class="num"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7"/><path d="M21 3 10 14"/><path d="M11 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6"/></svg></div>
+          <h3>Open Editor</h3><p>Jump to the right editor — Site Editor, Elementor, or standard editors.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-dark round-top round-bottom" id="pro">
+    <div class="wrap">
+      <div style="text-align:center;margin-bottom:8px" class="reveal"><span class="eyebrow" style="color:var(--blue-400)">Pro — Fix It at Scale</span></div>
+      <h2 class="h-section reveal" style="color:#fff;text-align:center;margin-bottom:16px">Preview-first<br />Search and Replace.</h2>
+      <div class="pro-intro reveal"><p>Pro turns discovery into action. Preview replacements, review before/after snippets, choose exactly which items to update, then run the replacement with batch undo available.</p></div>
+      <div class="pro-list">
+        <div class="pro-item reveal">
+          <svg class="pro-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h7"/><path d="M4 12h10"/><path d="M4 17h7"/><path d="M17 8l3 3-3 3"/><path d="M20 11h-5"/></svg>
+          <div><h3><span class="pro-tag">Pro</span>Replacement Preview</h3><p>Review before/after diff snippets before any content is changed. See exactly what will be replaced.</p></div>
+        </div>
+        <div class="pro-item reveal">
+          <svg class="pro-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="13" height="13" rx="2"/><path d="m7 10 2 2 4-5"/><path d="m14 14 6 6"/><path d="m20 14-6 6"/></svg>
+          <div><h3><span class="pro-tag">Pro</span>Selective Replacement</h3><p>Select all, clear, or choose specific items. Replace confirmed items only — not blind bulk mutation.</p></div>
+        </div>
+        <div class="pro-item reveal">
+          <svg class="pro-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 14 4 9l5-5"/><path d="M4 9h10a6 6 0 1 1-4.2 10.2"/></svg>
+          <div><h3><span class="pro-tag">Pro</span>Batch Undo</h3><p>Every replace job is stored as a snapshot. Undo a full batch via replace job history if something is off.</p></div>
+        </div>
+        <div class="pro-item reveal">
+          <svg class="pro-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/><circle cx="8" cy="5" r="2"/><circle cx="15" cy="12" r="2"/><circle cx="10" cy="19" r="2"/></svg>
+          <div><h3><span class="pro-tag">Pro</span>ACF Field Replacement</h3><p>Search and replace across supported ACF text-like fields — without exposing field values in Free.</p></div>
+        </div>
+        <div class="pro-item reveal">
+          <svg class="pro-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M7 9h.01"/><path d="M10 9h.01"/><path d="M13 9h.01"/><path d="M7 14h10"/></svg>
+          <div><h3><span class="pro-tag">Pro</span>Global Cmd+K Overlay</h3><p>Live search overlay across WordPress admin. Edit links and replace navigation from anywhere. Native Command Palette fallback included.</p></div>
+        </div>
+        <div class="pro-item reveal">
+          <svg class="pro-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 7v5l3 2"/></svg>
+          <div><h3><span class="pro-tag">Pro</span>Replace Job History</h3><p>Review recent replace jobs. Sticky review actions for larger replacement sets. Lemon Squeezy license activation built in.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-white round-top round-bottom" id="comparison">
+    <div class="wrap">
+      <div style="text-align:center;margin-bottom:48px" class="reveal">
+        <span class="eyebrow">Free vs Pro</span>
+        <h2 class="h-section" style="margin-top:8px;margin-bottom:12px">Choose your plan.</h2>
+        <p class="body-l" style="max-width:480px;margin:0 auto">Free finds content. Pro changes it safely with preview, confirmation, and undo.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="plan-card plan-free reveal">
+          <div class="plan-body">
+            <div class="plan-name">Free</div>
+            <p class="plan-desc">Best for finding where content lives.</p>
+            <div class="plan-price"><strong>$0</strong> <span class="per">Free forever</span></div>
+            <div class="plan-divider"></div>
+            <div class="plan-features">
+              {['Search all content layers','Direct editor links','Elementor links where detected','ACF count teaser','No Search and Replace'].map((item) => (
+                <div class="plan-feat yes"><span class="check">✓</span><span class="feat-label">{item}</span></div>
+              ))}
+            </div>
+          </div>
+          <div class="plan-footer">
+            <a href="#download" class="plan-cta plan-cta-outline">Download Free →</a>
+            <p style="text-align:center;font-size:.8125rem;color:var(--ink-faint);margin-top:12px">Install from WordPress.org</p>
+          </div>
+        </div>
+
+        <div class="plan-card plan-pro reveal">
+          <div class="plan-body">
+            <span class="plan-badge">Pro</span>
+            <div class="plan-name">Single Site</div>
+            <p class="plan-desc">Best for one production site.</p>
+            <div class="plan-price"><strong>€39</strong> <span class="per">per year</span></div>
+            <div class="plan-divider"></div>
+            <div class="plan-features">
+              {['Everything in Free','All Pro features','1 website'].map((item) => (
+                <div class="plan-feat yes"><span class="check">✓</span><span class="feat-label">{item}</span></div>
+              ))}
+            </div>
+          </div>
+          <div class="plan-footer-dark">
+            <a href="#pro" class="plan-cta">Upgrade to Pro →</a>
+            <p class="plan-license-note">License via Lemon Squeezy</p>
+          </div>
+        </div>
+
+        <div class="plan-card plan-pro plan-popular reveal">
+          <div class="plan-body">
+            <span class="plan-badge">Popular</span>
+            <div class="plan-name">5 Sites</div>
+            <p class="plan-desc">Best for freelancers and small client portfolios.</p>
+            <div class="plan-price"><strong>€79</strong> <span class="per">per year</span></div>
+            <div class="plan-divider"></div>
+            <div class="plan-features">
+              {['Everything in Free','All Pro features','Up to 5 websites'].map((item) => (
+                <div class="plan-feat yes"><span class="check">✓</span><span class="feat-label">{item}</span></div>
+              ))}
+            </div>
+          </div>
+          <div class="plan-footer-dark">
+            <a href="#pro" class="plan-cta">Upgrade to Pro →</a>
+            <p class="plan-license-note">License via Lemon Squeezy</p>
+          </div>
+        </div>
+
+        <div class="plan-card plan-pro reveal">
+          <div class="plan-body">
+            <span class="plan-badge">Agency</span>
+            <div class="plan-name">Unlimited</div>
+            <p class="plan-desc">Best for agencies and maintenance teams.</p>
+            <div class="plan-price"><strong>€149</strong> <span class="per">per year</span></div>
+            <div class="plan-divider"></div>
+            <div class="plan-features">
+              {['Everything in Free','All Pro features','Unlimited websites'].map((item) => (
+                <div class="plan-feat yes"><span class="check">✓</span><span class="feat-label">{item}</span></div>
+              ))}
+            </div>
+          </div>
+          <div class="plan-footer-dark">
+            <a href="#pro" class="plan-cta">Upgrade to Pro →</a>
+            <p class="plan-license-note">License via Lemon Squeezy</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="comparison-matrix reveal">
+        <button class="comparison-toggle" type="button" aria-expanded="false" aria-controls="feature-comparison">
+          <span>See difference</span>
+          <span class="comparison-toggle-mark">+</span>
+        </button>
+        <div class="comparison-table" id="feature-comparison" hidden>
+          <div class="comparison-table-head">
+            <span></span>
+            <strong>Free</strong>
+            <strong>Single</strong>
+            <strong>5 Sites</strong>
+            <strong>Unlimited</strong>
+          </div>
+          <div class="comparison-rows">
+            {[
+              ['Search all content layers', 'Yes', 'Yes', 'Yes', 'Yes'],
+              ['Direct editor links', 'Yes', 'Yes', 'Yes', 'Yes'],
+              ['Elementor edit links', 'Where detected', 'Where detected', 'Where detected', 'Where detected'],
+              ['ACF field values', 'Count only', 'Supported text-like fields', 'Supported text-like fields', 'Supported text-like fields'],
+              ['Search and Replace', 'No', 'Yes', 'Yes', 'Yes'],
+              ['Before/after preview', 'No', 'Yes', 'Yes', 'Yes'],
+              ['Selective replacement', 'No', 'Yes', 'Yes', 'Yes'],
+              ['Batch undo', 'No', 'Yes', 'Yes', 'Yes'],
+              ['Replace job history', 'No', 'Yes', 'Yes', 'Yes'],
+              ['Global Cmd+K overlay', 'No', 'Yes', 'Yes', 'Yes'],
+              ['License scope', 'Free forever', '1 website', 'Up to 5 websites', 'Unlimited websites'],
+            ].map(([feature, free, single, five, unlimited]) => (
+              <div class="comparison-row">
+                <span>{feature}</span>
+                <strong>{free}</strong>
+                <strong>{single}</strong>
+                <strong>{five}</strong>
+                <strong>{unlimited}</strong>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-white round-top" id="usecases">
+    <div class="wrap">
+      <div style="text-align:center;margin-bottom:40px" class="reveal">
+        <span class="eyebrow">Use Cases</span>
+        <h2 class="h-section" style="margin-top:8px;margin-bottom:12px">Real-world scenarios.</h2>
+        <p class="body-l" style="max-width:480px;margin:0 auto">From brand renames to site audits — find and fix content across every WordPress layer.</p>
+      </div>
+      <div class="uc-list">
+        {[
+          ['01','Brand Rename','Find every old brand mention across pages, templates, patterns, menus, Elementor sections, and supported ACF fields. Use Pro to preview and replace selected matches safely.'],
+          ['02','Phone Number Update','Search for the old phone number across visible content and reusable site areas. Use Pro to replace confirmed matches and undo the batch if needed.'],
+          ['03','Campaign URL Cleanup','Find campaign URLs in buttons, landing pages, Elementor data, patterns, and ACF fields. Replace selected matches after reviewing before/after snippets.'],
+          ['04','Legal & Compliance Text','Locate privacy, disclaimer, pricing, or offer text across posts, pages, templates, and reusable content before updating.'],
+          ['05','Client Support','Answer where do I edit this text without guessing through menus, editors, patterns, and theme files. Point clients to the exact editor.'],
+          ['06','Site Audit & Handover','Map where important content appears before a redesign, migration, or client handover. Know exactly what lives where.'],
+        ].map(([num,title,copy]) => (
+          <div class="uc-row reveal"><span class="uc-num">{num}</span><div><h3>{title}</h3><p>{copy}</p></div></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight" id="trust">
+    <div class="wrap">
+      <div style="text-align:center;margin-bottom:32px" class="reveal">
+        <span class="eyebrow">Trust & Safety</span>
+        <h2 class="h-section" style="margin-top:8px">Built safe for real<br />WordPress sites.</h2>
+      </div>
+      <div class="trust-list">
+        {[
+          ['Local Search','Free search runs inside the WordPress site. No external service required.'],
+          ['Permission Checks','Search endpoints require WordPress edit permissions. Pro replacement is admin-only.'],
+          ['Preview-First Replace','Pro uses preview and confirmed tokens before changing any content.'],
+          ['Batch Undo','Pro stores snapshots for every replace job. Undo a full batch if something is off.'],
+          ['License Privacy','License requests only happen when submitting a Pro license key. No background calls.'],
+          ['Clean Separation','Free package excludes Pro mutation files and endpoints entirely.'],
+          ['Editor-Focused','WEUX Content Finder is editor-focused, not a low-level database migration tool.'],
+          ['Supported Structures','Theme-file, classic menu, Elementor, and ACF support depend on supported WordPress structures.'],
+        ].map(([title,copy]) => (
+          <div class="trust-item reveal"><span class="check">✓</span><div><h3>{title}</h3><p>{copy}</p></div></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section faq-section" id="faq">
+    <div class="wrap">
+      <div class="faq-head reveal">
+        <span class="faq-pill">FAQs</span>
+        <h2 class="h-section">Got questions?<br />Here’s the answers.</h2>
+      </div>
+      <div class="faq-list reveal">
+        {[
+          ['What does the free plugin do?', 'Free helps you find where content lives across posts, pages, custom post types, templates, patterns, navigation, block theme files, Elementor data, and supported ACF matches. Results point you to the best available editor target.'],
+          ['What does Pro add?', 'Pro adds preview-first Search and Replace, selected-item replacement, before/after diff snippets, supported ACF field replacement, batch undo, replace job history, and the global Cmd+K overlay.'],
+          ['Does search leave my WordPress site?', 'Free search runs inside your WordPress site and does not require an external search service. License requests only happen when a Pro license key is submitted.'],
+          ['Does it work with Elementor?', 'Yes. WEUX Content Finder can search Elementor page data and show Edit in Elementor links where Elementor data and safe edit targets are detected.'],
+          ['How does ACF support work?', 'Free can show a count-only teaser when matching ACF fields exist without exposing field values. Pro unlocks search and replace for supported text-like ACF fields.'],
+          ['Is Search and Replace safe?', 'Pro is review-first. You preview replacements, review before/after snippets, choose the items to update, and confirmed replacement jobs store snapshots for batch undo.'],
+          ['Is this a database migration tool?', 'No. WEUX Content Finder is editor-focused, not a low-level database migration or serialized data replacement tool. It is built to locate editable content and safely update supported content layers.'],
+          ['How much does Pro cost?', 'Pro licenses are handled via Lemon Squeezy: Single Site is €39/year, 5 Sites is €79/year, and Unlimited is €149/year.'],
+        ].map(([question, answer], index) => (
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls={`faq-answer-${index}`}>
+              <span>{question}</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer" id={`faq-answer-${index}`} hidden>
+              <p>{answer}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-footer">
+    <section class="final-cta" id="download">
+      <div class="wrap final-cta-inner reveal">
+        <h2 class="h-section">Start finding content<br />faster.</h2>
+        <p>Free search is available now. Pro adds preview-first Search and Replace, ACF support, and batch undo. Choose the Pro license that fits your site or agency workflow.</p>
+        <div class="final-cta-btns">
+          <a href="#" class="btn btn-white btn-lg">Download Free Plugin →</a>
+          <a href="#pro" class="btn btn-ghost-w btn-lg">Upgrade to Pro</a>
+        </div>
+        <p class="note">Install from WordPress.org · Pro licensing via Lemon Squeezy</p>
+      </div>
     </section>
-  </main>
+
+    <footer>
+      <div class="footer-shell">
+        <div class="wrap">
+          <div class="footer-inner">
+            <div class="footer-brand">
+              <a href="#" class="nav-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="color:#fff"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><span style="color:#fff">WEUX Content Finder</span></a>
+              <p>The WordPress content search tool for real-world sites. Find where content lives and jump to the right editor.</p>
+            </div>
+            <div class="footer-cols">
+              <div><h4>Product</h4><ul><li><a href="#coverage">Search Coverage</a></li><li><a href="#pro">Pro Features</a></li><li><a href="#comparison">Free vs Pro</a></li><li><a href="#usecases">Use Cases</a></li></ul></div>
+              <div><h4>Resources</h4><ul><li><a href="#trust">Trust & Safety</a></li><li><a href="#faq">FAQs</a></li><li><a href="#problem">The Problem</a></li><li><a href="#workflow">How It Works</a></li></ul></div>
+              <div><h4>Get Started</h4><ul><li><a href="#download">Download Free</a></li><li><a href="#download">Upgrade to Pro</a></li><li><a href="#">WordPress.org</a></li></ul></div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <span>© 2025 WEUX Content Finder. Editor-focused, not a database migration tool.</span>
+            <span>Built for WordPress agencies, freelancers, and maintenance teams.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
 
   <script>
-    const form = document.querySelector('#notify-form');
-    const emailInput = document.querySelector('#email');
-    const feedback = document.querySelector('#notify-feedback');
-    const submitButton = document.querySelector('#notify-submit');
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    const nav = document.querySelector('.nav');
+    window.addEventListener('scroll', () => {
+      if (!nav) return;
+      nav.style.background = window.scrollY > 20 ? 'rgba(247,247,247,.85)' : 'rgba(247,247,247,.5)';
+    });
 
-    const setFeedback = (type, message) => {
-      if (!feedback) return;
-
-      feedback.textContent = message;
-      feedback.className = `notify-feedback mt-3 max-w-xl rounded-2xl px-4 py-3 text-sm font-medium is-${type}`;
-    };
-
-    const setLoading = (isLoading) => {
-      if (!submitButton) return;
-
-      submitButton.disabled = isLoading;
-      submitButton.innerHTML = isLoading
-        ? '<span class="notify-spinner" aria-hidden="true"></span> Saving...'
-        : 'Notify me <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" /></svg>';
-    };
-
-    form?.addEventListener('submit', async (event) => {
-      event.preventDefault();
-
-      const email = emailInput instanceof HTMLInputElement ? emailInput.value.trim().toLowerCase() : '';
-
-      if (!emailPattern.test(email)) {
-        emailInput?.setAttribute('aria-invalid', 'true');
-        setFeedback('error', 'Please enter a valid email address.');
-        emailInput?.focus();
-        return;
-      }
-
-      emailInput?.setAttribute('aria-invalid', 'false');
-      setFeedback('loading', 'Adding you to the launch list...');
-      setLoading(true);
-
-      try {
-        const response = await fetch('/api/notify', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email }),
-        });
-        const result = await response.json().catch(() => ({}));
-
-        if (!response.ok) {
-          throw new Error(result.message || 'Something went wrong. Please try again.');
+    const reveals = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
         }
+      });
+    }, { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach((el) => obs.observe(el));
 
-        form.reset();
-        setFeedback('success', result.message || 'You are on the list. We will let you know when Content Finder launches.');
-      } catch (error) {
-        setFeedback('error', error instanceof Error ? error.message : 'Something went wrong. Please try again.');
-      } finally {
-        setLoading(false);
+    const mt = document.getElementById('mobileToggle');
+    const nm = document.querySelector('.nav-menu');
+    mt?.addEventListener('click', () => {
+      if (!(nm instanceof HTMLElement)) return;
+      if (nm.style.display === 'flex') {
+        nm.style.display = '';
+      } else {
+        nm.style.display = 'flex';
+        nm.style.flexDirection = 'column';
+        nm.style.position = 'absolute';
+        nm.style.top = '56px';
+        nm.style.left = '24px';
+        nm.style.right = '24px';
+        nm.style.background = '#fff';
+        nm.style.padding = '16px';
+        nm.style.borderRadius = '16px';
+        nm.style.boxShadow = '0 10px 30px rgba(0,0,0,.12)';
+        nm.style.zIndex = '1001';
+        nm.style.gap = '14px';
       }
+    });
+    document.querySelectorAll('.nav-menu a').forEach((link) => link.addEventListener('click', () => {
+      if (window.innerWidth <= 780 && nm instanceof HTMLElement) nm.style.display = '';
+    }));
+
+    const comparisonToggle = document.querySelector('.comparison-toggle');
+    const comparisonTable = document.getElementById('feature-comparison');
+    comparisonToggle?.addEventListener('click', () => {
+      if (!(comparisonToggle instanceof HTMLElement) || !(comparisonTable instanceof HTMLElement)) return;
+      const isOpen = comparisonToggle.getAttribute('aria-expanded') === 'true';
+      comparisonToggle.setAttribute('aria-expanded', String(!isOpen));
+      comparisonTable.hidden = isOpen;
+      const label = comparisonToggle.querySelector('span:first-child');
+      if (label) label.textContent = isOpen ? 'See difference' : 'Hide difference';
+    });
+
+    document.querySelectorAll('.faq-question').forEach((button) => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.faq-item');
+        const answerId = button.getAttribute('aria-controls');
+        const answer = answerId ? document.getElementById(answerId) : null;
+        if (!(item instanceof HTMLElement) || !(answer instanceof HTMLElement)) return;
+
+        const isOpen = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', String(!isOpen));
+        item.classList.toggle('is-open', !isOpen);
+        answer.hidden = isOpen;
+      });
     });
   </script>
 </Layout>

@@ -4,7 +4,7 @@ interface Props {
   title?: string;
   description?: string;
 }
-const { title = 'Content Finder - Coming Soon', description = 'Content Finder is coming soon. Find and edit WordPress content across every Full Site Editing layer faster.' } = Astro.props;
+const { title = 'WEUX Content Finder - Find and fix WordPress content faster', description = 'Search across posts, pages, custom post types, templates, patterns, navigation, Elementor data, and ACF fields from one WordPress admin screen.' } = Astro.props;
 const baseUrl = import.meta.env.BASE_URL;
 ---
 
@@ -18,7 +18,7 @@ const baseUrl = import.meta.env.BASE_URL;
     <link rel="icon" type="image/svg+xml" href={`${baseUrl}favicon.svg`} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   </head>
   <body class="font-sans text-gray-900 antialiased bg-white">
     <slot />
