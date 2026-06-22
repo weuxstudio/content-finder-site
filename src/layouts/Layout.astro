@@ -3,9 +3,52 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
 }
-const { title = 'WEUX Content Finder - Find and fix WordPress content faster', description = 'Search across posts, pages, custom post types, templates, patterns, navigation, Elementor data, and ACF fields from one WordPress admin screen.' } = Astro.props;
+const { title = 'WEUX Content Finder - Find and fix WordPress content faster', description = 'Search across posts, pages, custom post types, templates, patterns, navigation, Elementor data, and ACF fields from one WordPress admin screen.', image = '/og-image.png' } = Astro.props;
 const baseUrl = import.meta.env.BASE_URL;
+const siteUrl = 'https://contentfinderwp.com/';
+
+// --- Structured Data ---
+
+const webSiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "WEUX Content Finder",
+  "url": siteUrl,
+  "description": "Find any text across WordPress posts, pages, custom post types, templates, patterns, navigation, Elementor data, and ACF fields — and jump straight to the edit screen.",
+  "applicationCategory": "WordPress Plugin",
+  "operatingSystem": "WordPress 6.0+"
+};
+
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "WEUX Content Finder",
+  "operatingSystem": "WordPress 6.0+",
+  "applicationCategory": "Plugin",
+  "offers": [
+    { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "EUR", "priceValidUntil": "2030-12-31" },
+    { "@type": "Offer", "name": "Single Site", "price": "39", "priceCurrency": "EUR", "priceValidUntil": "2030-12-31" },
+    { "@type": "Offer", "name": "5 Sites", "price": "79", "priceCurrency": "EUR", "priceValidUntil": "2030-12-31" },
+    { "@type": "Offer", "name": "Unlimited", "price": "149", "priceCurrency": "EUR", "priceValidUntil": "2030-12-31" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What does the free plugin do?", "acceptedAnswer": { "@type": "Answer", "text": "Free helps you find where content lives across posts, pages, custom post types, templates, patterns, navigation, block theme files, Elementor data, and supported ACF matches. Results point you to the best available editor target." } },
+    { "@type": "Question", "name": "What does Pro add?", "acceptedAnswer": { "@type": "Answer", "text": "Pro adds preview-first Search and Replace, selected-item replacement, before/after diff snippets, supported ACF field replacement, batch undo, replace job history, and the global Cmd+K overlay." } },
+    { "@type": "Question", "name": "Does search leave my WordPress site?", "acceptedAnswer": { "@type": "Answer", "text": "Free search runs inside your WordPress site and does not require an external search service. License requests only happen when a Pro license key is submitted." } },
+    { "@type": "Question", "name": "Does it work with Elementor?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. WEUX Content Finder can search Elementor page data and show Edit in Elementor links where Elementor data and safe edit targets are detected." } },
+    { "@type": "Question", "name": "How does ACF support work?", "acceptedAnswer": { "@type": "Answer", "text": "Free can show a count-only teaser when matching ACF fields exist without exposing field values. Pro unlocks search and replace for supported text-like ACF fields." } },
+    { "@type": "Question", "name": "Is Search and Replace safe?", "acceptedAnswer": { "@type": "Answer", "text": "Pro is review-first. You preview replacements, review before/after snippets, choose the items to update, and confirmed replacement jobs store snapshots for batch undo." } },
+    { "@type": "Question", "name": "Is this a database migration tool?", "acceptedAnswer": { "@type": "Answer", "text": "No. WEUX Content Finder is editor-focused, not a low-level database migration or serialized data replacement tool. It is built to locate editable content and safely update supported content layers." } },
+    { "@type": "Question", "name": "How much does Pro cost?", "acceptedAnswer": { "@type": "Answer", "text": "Pro licenses are handled via Lemon Squeezy: Single Site is €39/year, 5 Sites is €79/year, and Unlimited is €149/year." } }
+  ]
+};
 ---
 
 <!doctype html>
@@ -15,10 +58,41 @@ const baseUrl = import.meta.env.BASE_URL;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
+
+    <!-- Canonical -->
+    <link rel="canonical" href={siteUrl} />
+
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href={`${baseUrl}favicon.svg`} />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={`https://contentfinderwp.com${image}`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`https://contentfinderwp.com${image}`} />
+
+    <!-- Structured Data: WebSite -->
+    <script type="application/ld+json" data-schema="website">{JSON.stringify(webSiteSchema)}</script>
+
+    <!-- Structured Data: SoftwareApplication -->
+    <script type="application/ld+json" data-schema="software">{JSON.stringify(softwareSchema)}</script>
+
+    <!-- Structured Data: FAQPage -->
+    <script type="application/ld+json" data-schema="faq">{JSON.stringify(faqSchema)}</script>
   </head>
   <body class="font-sans text-gray-900 antialiased bg-white">
     <slot />
