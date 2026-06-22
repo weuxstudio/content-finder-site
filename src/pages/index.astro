@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="WEUX Content Finder - Find and fix WordPress content faster" description="Search across posts, pages, custom post types, templates, patterns, navigation, Elementor data, and ACF fields from one WordPress admin screen.">
+<Layout title="WEUX Content Finder | Find WordPress content and open the right editor" description="Search posts, pages, custom post types, templates, patterns, navigation, Elementor data, and ACF fields from one WordPress admin screen.">
   <nav class="nav">
     <div class="wrap nav-inner">
       <a href="#" class="nav-logo">
@@ -29,7 +29,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="hero-grid">
         <div class="hero-inner fade-up">
           <h1 class="h-hero"><span class="text-blue">Find</span> and <span class="text-blue">fix</span><br />WordPress <span class="text-blue">content</span><br />faster.</h1>
-          <p class="hero-sub">Search across posts, pages, custom post types, templates, template parts, navigation, synced patterns, block theme files, Elementor data, and supported ACF fields — from one WordPress admin screen. Jump straight to the right editor, or use Pro to preview, replace, and undo changes safely.</p>
+          <p class="hero-sub">Search posts, pages, custom post types, templates, template parts, navigation, synced patterns, block theme files, Elementor data, and supported ACF fields from one WordPress admin screen. Open the right editor, or use Pro to preview changes, replace selected matches, and undo a batch.</p>
           <div class="hero-ctas">
             <a href="#download" class="btn btn-blue btn-lg">Download Free Plugin →</a>
             <a href="#comparison" class="btn btn-outline btn-lg">Compare Free and Pro</a>
@@ -37,7 +37,7 @@ import Layout from '../layouts/Layout.astro';
           <div class="hero-meta">
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Runs inside WordPress</span>
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> No external service</span>
-            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Editor-focused results</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Editor links included</span>
           </div>
         </div>
 
@@ -45,7 +45,7 @@ import Layout from '../layouts/Layout.astro';
           <div class="mockup">
             <div class="mockup-bar">
               <span class="d r"></span><span class="d y"></span><span class="d g"></span>
-              <span class="url">wp-admin → Content Finder</span>
+              <span class="url">WordPress admin → Content Finder</span>
             </div>
             <div class="mockup-body">
               <div class="mockup-search">
@@ -57,11 +57,11 @@ import Layout from '../layouts/Layout.astro';
                 <span class="mf active">All (14)</span><span class="mf">Pages (5)</span><span class="mf">Templates (3)</span><span class="mf">Patterns (2)</span><span class="mf">Elementor (3)</span><span class="mf">ACF (1)</span>
               </div>
               <div class="mockup-results">
-                <div class="mr"><span class="type page">Page</span><span class="snip">About Us — <mark>old brand name</mark> is a creative agency…</span><span class="link">Edit →</span></div>
-                <div class="mr"><span class="type tpl">Template</span><span class="snip">header.html — <mark>old brand name</mark> footer text</span><span class="link">Site Editor →</span></div>
-                <div class="mr"><span class="type pat">Pattern</span><span class="snip">cta-section — <mark>old brand name</mark> call to action</span><span class="link">Edit →</span></div>
-                <div class="mr"><span class="type el">Elementor</span><span class="snip">Homepage — <mark>old brand name</mark> hero heading</span><span class="link">Edit in Elementor →</span></div>
-                <div class="mr"><span class="type menu">Menu</span><span class="snip">Footer Menu — <mark>old brand name</mark> link label</span><span class="link">Edit →</span></div>
+                <div class="mr"><span class="type page">Page</span><span class="snip">About Us: <mark>old brand name</mark> is a creative agency…</span><span class="link">Edit →</span></div>
+                <div class="mr"><span class="type tpl">Template</span><span class="snip">header.html: <mark>old brand name</mark> footer text</span><span class="link">Site Editor →</span></div>
+                <div class="mr"><span class="type pat">Pattern</span><span class="snip">cta section: <mark>old brand name</mark> call to action</span><span class="link">Edit →</span></div>
+                <div class="mr"><span class="type el">Elementor</span><span class="snip">Homepage: <mark>old brand name</mark> hero heading</span><span class="link">Edit in Elementor →</span></div>
+                <div class="mr"><span class="type menu">Menu</span><span class="snip">Footer Menu: <mark>old brand name</mark> link label</span><span class="link">Edit →</span></div>
               </div>
             </div>
           </div>
@@ -75,13 +75,13 @@ import Layout from '../layouts/Layout.astro';
       <div>
         <div class="reveal" style="margin-bottom:8px"><span class="eyebrow">The Problem</span></div>
         <h2 class="h-section reveal" style="margin-bottom:20px">WordPress content is<br />scattered everywhere.</h2>
-        <p class="body-l reveal" style="max-width:560px;margin-bottom:0">Teams waste time clicking through editors, guessing where copy lives, or using database-level tools that don't point to the actual editing surface.</p>
+        <p class="body-l reveal" style="max-width:560px;margin-bottom:0">Teams lose time opening editor after editor, guessing where copy is stored, or using database tools that do not point to the editing screen.</p>
 
         <div class="problem-narrative reveal">
-          <p><strong>WEUX Content Finder is not a generic database search tool.</strong> It is an editor-focused content locator and safe replacement workflow that searches the content layers WordPress teams actually edit — and opens the best available editor for each result.</p>
+          <p><strong>WEUX Content Finder is not a generic database search tool.</strong> It finds content in the WordPress areas teams edit and opens the matching editor for each result.</p>
           <ul class="problem-list">
             <li>Shows result type, match count, snippet, status, and modified date</li>
-            <li>Opens the best available editor — Site Editor, Elementor, or standard editors</li>
+            <li>Opens Site Editor, Elementor, or the standard WordPress editor when available</li>
             <li>Keeps free search local inside WordPress; no external service required</li>
             <li>Separates discovery from mutation: Free finds, Pro changes with preview and undo</li>
           </ul>
@@ -135,8 +135,8 @@ import Layout from '../layouts/Layout.astro';
     <div class="wrap">
       <div style="text-align:center;margin-bottom:48px" class="reveal">
         <span class="eyebrow">Search Coverage</span>
-        <h2 class="h-section" style="margin-top:8px;margin-bottom:12px">Search the places content<br />actually lives.</h2>
-        <p class="body-l" style="max-width:540px;margin:0 auto">One search across every layer WordPress teams edit — with direct links to the right editor for each result.</p>
+        <h2 class="h-section" style="margin-top:8px;margin-bottom:12px">Search the places<br />WordPress stores content.</h2>
+        <p class="body-l" style="max-width:540px;margin:0 auto">One search covers the content areas WordPress teams edit and links each result to the matching editor.</p>
       </div>
       <div class="coverage-list">
         <div class="cov-item reveal">
@@ -165,14 +165,14 @@ import Layout from '../layouts/Layout.astro';
         </div>
         <div class="cov-item reveal">
           <svg class="cov-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 3 7l9 5 9-5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>
-          <div><h3>Elementor Data</h3><p>Search Elementor page data. Get Edit in Elementor links where detected.</p></div>
+          <div><h3>Elementor Data</h3><p>Search Elementor page data. Show Edit in Elementor links when available.</p></div>
         </div>
         <div class="cov-item reveal">
           <svg class="cov-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0l-7.2-7.2a2 2 0 0 1 0-2.8l7.2-7.2a2 2 0 0 1 2.8 0l7.2 7.2a2 2 0 0 1 0 2.8z"/><path d="M7 17 17 7"/></svg>
-          <div><h3>ACF Teaser</h3><p>Free shows a count-only teaser. Pro unlocks full supported-field search and replace.</p></div>
+          <div><h3>ACF Teaser</h3><p>Free shows match counts for ACF. Pro searches and replaces supported field types.</p></div>
         </div>
       </div>
-      <p style="text-align:center;margin-top:32px;font-size:.9375rem;color:var(--ink-light)" class="reveal">Results don't just show matches — they point you to the best available editor target, including Site Editor links for block themes and Elementor edit links where possible.</p>
+      <p style="text-align:center;margin-top:32px;font-size:.9375rem;color:var(--ink-light)" class="reveal">Results include editor targets when WordPress exposes them, including Site Editor links for block themes and Elementor edit links where available.</p>
     </div>
   </section>
 
@@ -180,21 +180,21 @@ import Layout from '../layouts/Layout.astro';
     <div class="wrap support-grid">
       <div class="reveal">
         <span class="eyebrow">ACF & Builder Support</span>
-        <h2 class="h-section" style="margin-top:8px;margin-bottom:16px">Builder-aware search,<br />careful field handling.</h2>
-        <p class="body-l" style="max-width:520px">Elementor support is included in Free where detected. ACF stays careful by default: Free shows matching field counts, while Pro unlocks supported text-like field search and replace.</p>
+        <h2 class="h-section" style="margin-top:8px;margin-bottom:16px">Builder search,<br />careful field handling.</h2>
+        <p class="body-l" style="max-width:520px">Free includes Elementor search when data is detected. For ACF, Free shows match counts. Pro adds search and replace for supported text fields.</p>
       </div>
       <div class="support-list reveal">
         <div class="support-item">
           <svg class="support-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M7 9h.01"/><path d="M10 9h.01"/><path d="M13 9h.01"/><path d="M7 14h10"/></svg>
-          <div><h3>Elementor in Free</h3><p>Search Elementor page data and open Edit in Elementor links where safe editor targets are detected.</p></div>
+          <div><h3>Elementor in Free</h3><p>Search Elementor page data and open Edit in Elementor links when WordPress exposes an editor target.</p></div>
         </div>
         <div class="support-item">
           <svg class="support-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/><circle cx="8" cy="5" r="2"/><circle cx="15" cy="12" r="2"/><circle cx="10" cy="19" r="2"/></svg>
-          <div><h3>ACF in Free</h3><p>Show a count-only teaser when matching ACF fields exist, without exposing field values.</p></div>
+          <div><h3>ACF in Free</h3><p>Show matching ACF field counts without exposing field values.</p></div>
         </div>
         <div class="support-item">
           <svg class="support-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h7"/><path d="M4 12h10"/><path d="M4 17h7"/><path d="M17 8l3 3-3 3"/><path d="M20 11h-5"/></svg>
-          <div><h3>ACF in Pro</h3><p>Search and replace across supported text-like ACF fields with preview, selection, and undo.</p></div>
+          <div><h3>ACF in Pro</h3><p>Search and replace supported ACF text fields with preview, selection, and undo.</p></div>
         </div>
       </div>
     </div>
@@ -214,7 +214,7 @@ import Layout from '../layouts/Layout.astro';
         <span class="flow-arrow">→</span>
         <div class="flow-step">
           <div class="num"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M7 12h10"/><path d="M10 18h4"/></svg></div>
-          <h3>Filter</h3><p>Filter by result type — pages, templates, patterns, Elementor, and more.</p>
+          <h3>Filter</h3><p>Filter by result type, including pages, templates, patterns, and Elementor.</p>
         </div>
         <span class="flow-arrow">→</span>
         <div class="flow-step">
@@ -224,7 +224,7 @@ import Layout from '../layouts/Layout.astro';
         <span class="flow-arrow">→</span>
         <div class="flow-step">
           <div class="num"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7"/><path d="M21 3 10 14"/><path d="M11 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6"/></svg></div>
-          <h3>Open Editor</h3><p>Jump to the right editor — Site Editor, Elementor, or standard editors.</p>
+          <h3>Open Editor</h3><p>Open Site Editor, Elementor, or the standard WordPress editor.</p>
         </div>
       </div>
     </div>
@@ -232,17 +232,17 @@ import Layout from '../layouts/Layout.astro';
 
   <section class="section bg-dark round-top round-bottom" id="pro">
     <div class="wrap">
-      <div style="text-align:center;margin-bottom:8px" class="reveal"><span class="eyebrow" style="color:var(--blue-400)">Pro — Fix It at Scale</span></div>
-      <h2 class="h-section reveal" style="color:#fff;text-align:center;margin-bottom:16px">Preview-first<br />Search and Replace.</h2>
-      <div class="pro-intro reveal"><p>Pro turns discovery into action. Preview replacements, review before/after snippets, choose exactly which items to update, then run the replacement with batch undo available.</p></div>
+      <div style="text-align:center;margin-bottom:8px" class="reveal"><span class="eyebrow" style="color:var(--blue-400)">Pro Features</span></div>
+      <h2 class="h-section reveal" style="color:#fff;text-align:center;margin-bottom:16px">Review changes before<br />you replace content.</h2>
+      <div class="pro-intro reveal"><p>Pro lets you preview replacements, review before and after snippets, choose the items to update, and undo a completed batch.</p></div>
       <div class="pro-list">
         <div class="pro-item reveal">
           <svg class="pro-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h7"/><path d="M4 12h10"/><path d="M4 17h7"/><path d="M17 8l3 3-3 3"/><path d="M20 11h-5"/></svg>
-          <div><h3><span class="pro-tag">Pro</span>Replacement Preview</h3><p>Review before/after diff snippets before any content is changed. See exactly what will be replaced.</p></div>
+          <div><h3><span class="pro-tag">Pro</span>Replacement Preview</h3><p>Review before and after snippets before content changes. See what will be replaced.</p></div>
         </div>
         <div class="pro-item reveal">
           <svg class="pro-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="13" height="13" rx="2"/><path d="m7 10 2 2 4-5"/><path d="m14 14 6 6"/><path d="m20 14-6 6"/></svg>
-          <div><h3><span class="pro-tag">Pro</span>Selective Replacement</h3><p>Select all, clear, or choose specific items. Replace confirmed items only — not blind bulk mutation.</p></div>
+          <div><h3><span class="pro-tag">Pro</span>Selective Replacement</h3><p>Select all, clear the list, or choose specific items. Pro changes confirmed items only.</p></div>
         </div>
         <div class="pro-item reveal">
           <svg class="pro-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 14 4 9l5-5"/><path d="M4 9h10a6 6 0 1 1-4.2 10.2"/></svg>
@@ -250,7 +250,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
         <div class="pro-item reveal">
           <svg class="pro-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/><circle cx="8" cy="5" r="2"/><circle cx="15" cy="12" r="2"/><circle cx="10" cy="19" r="2"/></svg>
-          <div><h3><span class="pro-tag">Pro</span>ACF Field Replacement</h3><p>Search and replace across supported ACF text-like fields — without exposing field values in Free.</p></div>
+          <div><h3><span class="pro-tag">Pro</span>ACF Field Replacement</h3><p>Search and replace supported ACF text fields. Free only shows match counts.</p></div>
         </div>
         <div class="pro-item reveal">
           <svg class="pro-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M7 9h.01"/><path d="M10 9h.01"/><path d="M13 9h.01"/><path d="M7 14h10"/></svg>
@@ -269,18 +269,18 @@ import Layout from '../layouts/Layout.astro';
       <div style="text-align:center;margin-bottom:48px" class="reveal">
         <span class="eyebrow">Free vs Pro</span>
         <h2 class="h-section" style="margin-top:8px;margin-bottom:12px">Choose your plan.</h2>
-        <p class="body-l" style="max-width:480px;margin:0 auto">Free finds content. Pro changes it safely with preview, confirmation, and undo.</p>
+        <p class="body-l" style="max-width:480px;margin:0 auto">Free finds content. Pro adds review, confirmation, and undo.</p>
       </div>
 
       <div class="pricing-grid">
         <div class="plan-card plan-free reveal">
           <div class="plan-body">
             <div class="plan-name">Free</div>
-            <p class="plan-desc">Best for finding where content lives.</p>
-            <div class="plan-price"><strong>$0</strong> <span class="per">Free forever</span></div>
+            <p class="plan-desc">For finding where content is managed.</p>
+            <div class="plan-price"><strong>$0</strong> <span class="per">No license required</span></div>
             <div class="plan-divider"></div>
             <div class="plan-features">
-              {['Search all content layers','Direct editor links','Elementor links where detected','ACF count teaser','No Search and Replace'].map((item) => (
+              {['Search content layers','Direct editor links','Elementor links when available','ACF match counts','No Search and Replace'].map((item) => (
                 <div class="plan-feat yes"><span class="check">✓</span><span class="feat-label">{item}</span></div>
               ))}
             </div>
@@ -295,7 +295,7 @@ import Layout from '../layouts/Layout.astro';
           <div class="plan-body">
             <span class="plan-badge">Pro</span>
             <div class="plan-name">Single Site</div>
-            <p class="plan-desc">Best for one production site.</p>
+            <p class="plan-desc">For one production site.</p>
             <div class="plan-price"><strong>€39</strong> <span class="per">per year</span></div>
             <div class="plan-divider"></div>
             <div class="plan-features">
@@ -314,7 +314,7 @@ import Layout from '../layouts/Layout.astro';
           <div class="plan-body">
             <span class="plan-badge">Popular</span>
             <div class="plan-name">5 Sites</div>
-            <p class="plan-desc">Best for freelancers and small client portfolios.</p>
+            <p class="plan-desc">For freelancers and small client portfolios.</p>
             <div class="plan-price"><strong>€79</strong> <span class="per">per year</span></div>
             <div class="plan-divider"></div>
             <div class="plan-features">
@@ -333,7 +333,7 @@ import Layout from '../layouts/Layout.astro';
           <div class="plan-body">
             <span class="plan-badge">Agency</span>
             <div class="plan-name">Unlimited</div>
-            <p class="plan-desc">Best for agencies and maintenance teams.</p>
+            <p class="plan-desc">For agencies and maintenance teams.</p>
             <div class="plan-price"><strong>€149</strong> <span class="per">per year</span></div>
             <div class="plan-divider"></div>
             <div class="plan-features">
@@ -348,6 +348,10 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
       </div>
+
+      <p class="pricing-note reveal">
+        Prices shown exclude taxes that may apply based on your billing address. The final price is shown at checkout. Subscriptions renew according to your billing cycle at the listed price. Prices may be rounded for display.
+      </p>
 
       <div class="comparison-matrix reveal">
         <button class="comparison-toggle" type="button" aria-expanded="false" aria-controls="feature-comparison">
@@ -366,15 +370,15 @@ import Layout from '../layouts/Layout.astro';
             {[
               ['Search all content layers', 'Yes', 'Yes', 'Yes', 'Yes'],
               ['Direct editor links', 'Yes', 'Yes', 'Yes', 'Yes'],
-              ['Elementor edit links', 'Where detected', 'Where detected', 'Where detected', 'Where detected'],
-              ['ACF field values', 'Count only', 'Supported text-like fields', 'Supported text-like fields', 'Supported text-like fields'],
+              ['Elementor edit links', 'When available', 'When available', 'When available', 'When available'],
+              ['ACF field values', 'Counts only', 'Supported text fields', 'Supported text fields', 'Supported text fields'],
               ['Search and Replace', 'No', 'Yes', 'Yes', 'Yes'],
-              ['Before/after preview', 'No', 'Yes', 'Yes', 'Yes'],
+              ['Before and after preview', 'No', 'Yes', 'Yes', 'Yes'],
               ['Selective replacement', 'No', 'Yes', 'Yes', 'Yes'],
               ['Batch undo', 'No', 'Yes', 'Yes', 'Yes'],
               ['Replace job history', 'No', 'Yes', 'Yes', 'Yes'],
               ['Global Cmd+K overlay', 'No', 'Yes', 'Yes', 'Yes'],
-              ['License scope', 'Free forever', '1 website', 'Up to 5 websites', 'Unlimited websites'],
+              ['License scope', 'No license required', '1 website', 'Up to 5 websites', 'Unlimited websites'],
             ].map(([feature, free, single, five, unlimited]) => (
               <div class="comparison-row">
                 <span>{feature}</span>
@@ -394,14 +398,14 @@ import Layout from '../layouts/Layout.astro';
     <div class="wrap">
       <div style="text-align:center;margin-bottom:40px" class="reveal">
         <span class="eyebrow">Use Cases</span>
-        <h2 class="h-section" style="margin-top:8px;margin-bottom:12px">Real-world scenarios.</h2>
-        <p class="body-l" style="max-width:480px;margin:0 auto">From brand renames to site audits — find and fix content across every WordPress layer.</p>
+        <h2 class="h-section" style="margin-top:8px;margin-bottom:12px">Common use cases.</h2>
+        <p class="body-l" style="max-width:480px;margin:0 auto">Use it for brand renames, site audits, and recurring content maintenance.</p>
       </div>
       <div class="uc-list">
         {[
-          ['01','Brand Rename','Find every old brand mention across pages, templates, patterns, menus, Elementor sections, and supported ACF fields. Use Pro to preview and replace selected matches safely.'],
+          ['01','Brand Rename','Find old brand mentions across pages, templates, patterns, menus, Elementor sections, and supported ACF fields. Use Pro to preview and replace selected matches.'],
           ['02','Phone Number Update','Search for the old phone number across visible content and reusable site areas. Use Pro to replace confirmed matches and undo the batch if needed.'],
-          ['03','Campaign URL Cleanup','Find campaign URLs in buttons, landing pages, Elementor data, patterns, and ACF fields. Replace selected matches after reviewing before/after snippets.'],
+          ['03','Campaign URL Cleanup','Find campaign URLs in buttons, landing pages, Elementor data, patterns, and ACF fields. Replace selected matches after reviewing before and after snippets.'],
           ['04','Legal & Compliance Text','Locate privacy, disclaimer, pricing, or offer text across posts, pages, templates, and reusable content before updating.'],
           ['05','Client Support','Answer where do I edit this text without guessing through menus, editors, patterns, and theme files. Point clients to the exact editor.'],
           ['06','Site Audit & Handover','Map where important content appears before a redesign, migration, or client handover. Know exactly what lives where.'],
@@ -416,18 +420,18 @@ import Layout from '../layouts/Layout.astro';
     <div class="wrap">
       <div style="text-align:center;margin-bottom:32px" class="reveal">
         <span class="eyebrow">Trust & Safety</span>
-        <h2 class="h-section" style="margin-top:8px">Built safe for real<br />WordPress sites.</h2>
+        <h2 class="h-section" style="margin-top:8px">Built for real<br />WordPress sites.</h2>
       </div>
       <div class="trust-list">
         {[
           ['Local Search','Free search runs inside the WordPress site. No external service required.'],
-          ['Permission Checks','Search endpoints require WordPress edit permissions. Pro replacement is admin-only.'],
-          ['Preview-First Replace','Pro uses preview and confirmed tokens before changing any content.'],
+          ['Permission Checks','Search endpoints require WordPress edit permissions. Pro replacement is limited to admins.'],
+          ['Replacement Review','Pro uses previews and confirmation before changing content.'],
           ['Batch Undo','Pro stores snapshots for every replace job. Undo a full batch if something is off.'],
           ['License Privacy','License requests only happen when submitting a Pro license key. No background calls.'],
           ['Clean Separation','Free package excludes Pro mutation files and endpoints entirely.'],
-          ['Editor-Focused','WEUX Content Finder is editor-focused, not a low-level database migration tool.'],
-          ['Supported Structures','Theme-file, classic menu, Elementor, and ACF support depend on supported WordPress structures.'],
+          ['Editor Tools','WEUX Content Finder is made for WordPress editing screens, not database migrations.'],
+          ['Supported Structures','Theme file, classic menu, Elementor, and ACF support depend on the structures available in WordPress.'],
         ].map(([title,copy]) => (
           <div class="trust-item reveal"><span class="check">✓</span><div><h3>{title}</h3><p>{copy}</p></div></div>
         ))}
@@ -439,17 +443,17 @@ import Layout from '../layouts/Layout.astro';
     <div class="wrap">
       <div class="faq-head reveal">
         <span class="faq-pill">FAQs</span>
-        <h2 class="h-section">Got questions?<br />Here’s the answers.</h2>
+        <h2 class="h-section">Questions before<br />you install?</h2>
       </div>
       <div class="faq-list reveal">
         {[
-          ['What does the free plugin do?', 'Free helps you find where content lives across posts, pages, custom post types, templates, patterns, navigation, block theme files, Elementor data, and supported ACF matches. Results point you to the best available editor target.'],
-          ['What does Pro add?', 'Pro adds preview-first Search and Replace, selected-item replacement, before/after diff snippets, supported ACF field replacement, batch undo, replace job history, and the global Cmd+K overlay.'],
+          ['What does the free plugin do?', 'Free helps you find where content is managed across posts, pages, custom post types, templates, patterns, navigation, block theme files, Elementor data, and supported ACF matches. Results include editor links when WordPress provides them.'],
+          ['What does Pro add?', 'Pro adds Search and Replace with review, selected item replacement, before and after snippets, supported ACF field replacement, batch undo, replace history, and the global Cmd+K overlay.'],
           ['Does search leave my WordPress site?', 'Free search runs inside your WordPress site and does not require an external search service. License requests only happen when a Pro license key is submitted.'],
-          ['Does it work with Elementor?', 'Yes. WEUX Content Finder can search Elementor page data and show Edit in Elementor links where Elementor data and safe edit targets are detected.'],
-          ['How does ACF support work?', 'Free can show a count-only teaser when matching ACF fields exist without exposing field values. Pro unlocks search and replace for supported text-like ACF fields.'],
-          ['Is Search and Replace safe?', 'Pro is review-first. You preview replacements, review before/after snippets, choose the items to update, and confirmed replacement jobs store snapshots for batch undo.'],
-          ['Is this a database migration tool?', 'No. WEUX Content Finder is editor-focused, not a low-level database migration or serialized data replacement tool. It is built to locate editable content and safely update supported content layers.'],
+          ['Does it work with Elementor?', 'Yes. WEUX Content Finder can search Elementor page data and show Edit in Elementor links when Elementor data and editor targets are available.'],
+          ['How does ACF support work?', 'Free can show ACF match counts without exposing field values. Pro adds search and replace for supported ACF text fields.'],
+          ['Is Search and Replace safe?', 'Pro starts with a review step. You preview replacements, read before and after snippets, choose the items to update, and confirmed jobs store snapshots for batch undo.'],
+          ['Is this a database migration tool?', 'No. WEUX Content Finder is made for WordPress editing screens, not database migrations or serialized data replacement. It locates editable content and updates supported content layers.'],
           ['How much does Pro cost?', 'Pro licenses are handled via Lemon Squeezy: Single Site is €39/year, 5 Sites is €79/year, and Unlimited is €149/year.'],
         ].map(([question, answer], index) => (
           <div class="faq-item">
@@ -470,7 +474,7 @@ import Layout from '../layouts/Layout.astro';
     <section class="final-cta" id="download">
       <div class="wrap final-cta-inner reveal">
         <h2 class="h-section">Start finding content<br />faster.</h2>
-        <p>Free search is available now. Pro adds preview-first Search and Replace, ACF support, and batch undo. Choose the Pro license that fits your site or agency workflow.</p>
+        <p>Free search is available now. Pro adds Search and Replace with review steps, ACF support, and batch undo. Choose the Pro license that fits your site or agency setup.</p>
         <div class="final-cta-btns">
           <a href="#" class="btn btn-white btn-lg">Download Free Plugin →</a>
           <a href="#pro" class="btn btn-ghost-w btn-lg">Upgrade to Pro</a>
@@ -485,7 +489,7 @@ import Layout from '../layouts/Layout.astro';
           <div class="footer-inner">
             <div class="footer-brand">
               <a href="#" class="nav-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="color:#fff"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><span style="color:#fff">WEUX Content Finder</span></a>
-              <p>The WordPress content search tool for real-world sites. Find where content lives and jump to the right editor.</p>
+              <p>The WordPress content search tool for production sites. Find where content is managed and open the right editor.</p>
             </div>
             <div class="footer-cols">
               <div><h4>Product</h4><ul><li><a href="#coverage">Search Coverage</a></li><li><a href="#pro">Pro Features</a></li><li><a href="#comparison">Free vs Pro</a></li><li><a href="#usecases">Use Cases</a></li></ul></div>
@@ -494,7 +498,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
           <div class="footer-bottom">
-            <span>© 2025 WEUX Content Finder. Editor-focused, not a database migration tool.</span>
+            <span>© 2025 WEUX Content Finder. Built for WordPress editing screens, not database migrations.</span>
             <span>Built for WordPress agencies, freelancers, and maintenance teams.</span>
           </div>
         </div>

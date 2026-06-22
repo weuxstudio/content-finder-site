@@ -5,7 +5,7 @@ interface Props {
   description?: string;
   image?: string;
 }
-const { title = 'WEUX Content Finder - Find and fix WordPress content faster', description = 'Search across posts, pages, custom post types, templates, patterns, navigation, Elementor data, and ACF fields from one WordPress admin screen.', image = '/og-image.png' } = Astro.props;
+const { title = 'WEUX Content Finder | Find WordPress content and open the right editor', description = 'Search across posts, pages, custom post types, templates, patterns, navigation, Elementor data, and ACF fields from one WordPress admin screen.', image = '/og-image.png' } = Astro.props;
 const baseUrl = import.meta.env.BASE_URL;
 const siteUrl = 'https://contentfinderwp.com/';
 
@@ -16,7 +16,7 @@ const webSiteSchema = {
   "@type": "WebSite",
   "name": "WEUX Content Finder",
   "url": siteUrl,
-  "description": "Find any text across WordPress posts, pages, custom post types, templates, patterns, navigation, Elementor data, and ACF fields — and jump straight to the edit screen.",
+  "description": "Find text across WordPress posts, pages, custom post types, templates, patterns, navigation, Elementor data, and ACF fields. Open the matching edit screen from each result.",
   "applicationCategory": "WordPress Plugin",
   "operatingSystem": "WordPress 6.0+"
 };
@@ -39,13 +39,13 @@ const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "What does the free plugin do?", "acceptedAnswer": { "@type": "Answer", "text": "Free helps you find where content lives across posts, pages, custom post types, templates, patterns, navigation, block theme files, Elementor data, and supported ACF matches. Results point you to the best available editor target." } },
-    { "@type": "Question", "name": "What does Pro add?", "acceptedAnswer": { "@type": "Answer", "text": "Pro adds preview-first Search and Replace, selected-item replacement, before/after diff snippets, supported ACF field replacement, batch undo, replace job history, and the global Cmd+K overlay." } },
+    { "@type": "Question", "name": "What does the free plugin do?", "acceptedAnswer": { "@type": "Answer", "text": "Free helps you find where content is managed across posts, pages, custom post types, templates, patterns, navigation, block theme files, Elementor data, and supported ACF matches. Results include editor links when WordPress provides them." } },
+    { "@type": "Question", "name": "What does Pro add?", "acceptedAnswer": { "@type": "Answer", "text": "Pro adds Search and Replace with review, selected item replacement, before and after snippets, supported ACF field replacement, batch undo, replace history, and the global Cmd+K overlay." } },
     { "@type": "Question", "name": "Does search leave my WordPress site?", "acceptedAnswer": { "@type": "Answer", "text": "Free search runs inside your WordPress site and does not require an external search service. License requests only happen when a Pro license key is submitted." } },
-    { "@type": "Question", "name": "Does it work with Elementor?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. WEUX Content Finder can search Elementor page data and show Edit in Elementor links where Elementor data and safe edit targets are detected." } },
-    { "@type": "Question", "name": "How does ACF support work?", "acceptedAnswer": { "@type": "Answer", "text": "Free can show a count-only teaser when matching ACF fields exist without exposing field values. Pro unlocks search and replace for supported text-like ACF fields." } },
-    { "@type": "Question", "name": "Is Search and Replace safe?", "acceptedAnswer": { "@type": "Answer", "text": "Pro is review-first. You preview replacements, review before/after snippets, choose the items to update, and confirmed replacement jobs store snapshots for batch undo." } },
-    { "@type": "Question", "name": "Is this a database migration tool?", "acceptedAnswer": { "@type": "Answer", "text": "No. WEUX Content Finder is editor-focused, not a low-level database migration or serialized data replacement tool. It is built to locate editable content and safely update supported content layers." } },
+    { "@type": "Question", "name": "Does it work with Elementor?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. WEUX Content Finder can search Elementor page data and show Edit in Elementor links when Elementor data and editor targets are available." } },
+    { "@type": "Question", "name": "How does ACF support work?", "acceptedAnswer": { "@type": "Answer", "text": "Free can show ACF match counts without exposing field values. Pro adds search and replace for supported ACF text fields." } },
+    { "@type": "Question", "name": "Is Search and Replace safe?", "acceptedAnswer": { "@type": "Answer", "text": "Pro starts with a review step. You preview replacements, read before and after snippets, choose the items to update, and confirmed jobs store snapshots for batch undo." } },
+    { "@type": "Question", "name": "Is this a database migration tool?", "acceptedAnswer": { "@type": "Answer", "text": "No. WEUX Content Finder is made for WordPress editing screens, not database migrations or serialized data replacement. It locates editable content and updates supported content layers." } },
     { "@type": "Question", "name": "How much does Pro cost?", "acceptedAnswer": { "@type": "Answer", "text": "Pro licenses are handled via Lemon Squeezy: Single Site is €39/year, 5 Sites is €79/year, and Unlimited is €149/year." } }
   ]
 };
