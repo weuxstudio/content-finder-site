@@ -577,13 +577,19 @@ code {
   font-size: 0.9375rem;
   font-weight: 600;
   color: var(--ink-light);
-  transition: color 0.15s;
+  transition: color 0.2s, border-color 0.2s;
   border-bottom: 2px solid transparent;
   padding: 8px 0;
+  text-decoration: none;
 }
 
 .nav-link:hover {
-  color: var(--ink);
+  color: var(--blue);
+}
+
+.nav-link.active {
+  color: var(--blue);
+  border-bottom-color: var(--blue);
 }
 
 .nav-cta {
