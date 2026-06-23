@@ -1,0 +1,19 @@
+Internal Link Analysis — contentfinderwp.com
+==================================================
+Pages crawled: 3
+Unique pages found: 3
+Total internal links: 8
+Max depth reached: 1
+
+Links per page: min=2, max=3, avg=2.7
+
+Top Anchor Texts:
+  [3x] "Imprint"
+  [3x] "Privacy Policy"
+
+Issues:
+  ⚠️ 1 page(s) have fewer than 3 internal links
+  ⚠️ 2 link(s) have no anchor text
+
+Recommendations:
+  💡 Increase internal linking — aim for 3-5 relevant links per 1000 words

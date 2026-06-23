@@ -1,0 +1,6 @@
+Redirect Chain — https://contentfinderwp.com
+==================================================
+  ✅ [200] https://contentfinderwp.com (211ms) — FINAL
+
+Total hops: 0 | Total time: 211ms
+

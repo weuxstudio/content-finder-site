@@ -24,6 +24,9 @@ const baseUrl = import.meta.env.BASE_URL;
 const siteUrl = 'https://contentfinderwp.com/';
 const canonicalHref = canonicalUrl ?? new URL(canonicalPath, siteUrl).href;
 const socialMetaTitle = socialTitle ?? title;
+const wordpressPluginUrl = 'https://wordpress.org/plugins/weux-content-finder/';
+const studioUrl = 'https://weux.studio/';
+const dateModified = '2026-06-23';
 
 // --- Structured Data ---
 
@@ -34,20 +37,51 @@ const webSiteSchema = {
   "url": siteUrl,
   "description": "Find text across WordPress posts, pages, custom post types, templates, patterns, navigation, Elementor data, and ACF fields. Open the matching edit screen from each result.",
   "applicationCategory": "WordPress Plugin",
-  "operatingSystem": "WordPress 6.0+"
+  "operatingSystem": "WordPress 6.0+",
+  "dateModified": dateModified
 };
 
 const softwareSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "WEUX Content Finder",
+  "url": siteUrl,
+  "description": "WEUX Content Finder is a WordPress plugin that finds where content is managed across posts, pages, custom post types, templates, patterns, navigation, Elementor data, and supported ACF fields.",
+  "downloadUrl": wordpressPluginUrl,
   "operatingSystem": "WordPress 6.0+",
-  "applicationCategory": "Plugin",
+  "applicationCategory": "WordPress Plugin",
+  "applicationSubCategory": "Content search and replacement",
+  "dateModified": dateModified,
+  "featureList": [
+    "Search posts, pages, and custom post types.",
+    "Search block templates, template parts, synced patterns, navigation menus, and block theme files.",
+    "Search Elementor page data and open Elementor edit links where available.",
+    "Show ACF match counts in Free.",
+    "Add preview-first Search and Replace in Pro.",
+    "Review before and after snippets before changing content.",
+    "Selectively replace confirmed matches.",
+    "Undo completed replacement batches.",
+    "Search and replace supported text-like ACF fields in Pro."
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "WEUX Studio",
+    "url": studioUrl
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "WEUX Studio",
+    "url": studioUrl
+  },
+  "sameAs": [
+    wordpressPluginUrl,
+    studioUrl
+  ],
   "offers": [
-    { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "EUR", "priceValidUntil": "2030-12-31" },
-    { "@type": "Offer", "name": "Single Site", "price": "39", "priceCurrency": "EUR", "priceValidUntil": "2030-12-31" },
-    { "@type": "Offer", "name": "5 Sites", "price": "79", "priceCurrency": "EUR", "priceValidUntil": "2030-12-31" },
-    { "@type": "Offer", "name": "Unlimited", "price": "149", "priceCurrency": "EUR", "priceValidUntil": "2030-12-31" }
+    { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "EUR", "priceValidUntil": "2030-12-31", "url": wordpressPluginUrl },
+    { "@type": "Offer", "name": "Single Site", "price": "39", "priceCurrency": "EUR", "priceValidUntil": "2030-12-31", "url": "https://contentfinderwp.com/#comparison" },
+    { "@type": "Offer", "name": "5 Sites", "price": "79", "priceCurrency": "EUR", "priceValidUntil": "2030-12-31", "url": "https://contentfinderwp.com/#comparison" },
+    { "@type": "Offer", "name": "Unlimited", "price": "149", "priceCurrency": "EUR", "priceValidUntil": "2030-12-31", "url": "https://contentfinderwp.com/#comparison" }
   ]
 };
 

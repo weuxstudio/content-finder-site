@@ -1,0 +1,26 @@
+{
+  "ai_bot_access": {
+    "GPTBot": "allowed explicit",
+    "OAI-SearchBot": "allowed explicit",
+    "ChatGPT-User": "allowed explicit",
+    "PerplexityBot": "allowed explicit",
+    "ClaudeBot": "allowed explicit",
+    "Claude-SearchBot": "allowed via *",
+    "Claude-User": "allowed via *",
+    "anthropic-ai": "allowed explicit",
+    "Googlebot": "allowed via *",
+    "Bingbot": "allowed via *",
+    "msnbot": "allowed via *",
+    "Applebot": "blocked explicit",
+    "FacebookBot": "allowed explicit"
+  },
+  "llms_checks": {
+    "has_product_definition": true,
+    "has_audience": true,
+    "has_free_pro": true,
+    "has_pricing": true,
+    "has_trust": true,
+    "has_links": true,
+    "has_llms_full": false
+  }
+}

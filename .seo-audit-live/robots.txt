@@ -1,0 +1,36 @@
+robots.txt Analysis — https://contentfinderwp.com/robots.txt
+==================================================
+Status: 200
+
+Sitemaps (1):
+  • https://contentfinderwp.com/sitemap-index.xml
+
+User-Agents (15):
+  *: 0 disallow, 1 allow
+  GPTBot: 0 disallow, 1 allow
+  ClaudeBot: 0 disallow, 1 allow
+  OAI-SearchBot: 0 disallow, 1 allow
+  PerplexityBot: 0 disallow, 1 allow
+  Google-Extended: 0 disallow, 1 allow
+  ChatGPT-User: 0 disallow, 1 allow
+  anthropic-ai: 0 disallow, 1 allow
+  FacebookBot: 0 disallow, 1 allow
+  Applebot-Extended: 1 disallow, 0 allow
+  CCBot: 1 disallow, 0 allow
+  Bytespider: 1 disallow, 0 allow
+  meta-externalagent: 1 disallow, 0 allow
+  Amazonbot: 1 disallow, 0 allow
+  CloudflareBrowserRenderingCrawler: 1 disallow, 0 allow
+
+AI Crawler Management:
+  ℹ️ GPTBot: explicitly allowed
+  ℹ️ ChatGPT-User: explicitly allowed
+  ℹ️ ClaudeBot: explicitly allowed
+  ℹ️ PerplexityBot: explicitly allowed
+  ℹ️ Google-Extended: explicitly allowed
+  ✅ Applebot-Extended: fully blocked
+  ✅ Bytespider: fully blocked
+  ✅ CCBot: fully blocked
+  ℹ️ anthropic-ai: explicitly allowed
+  ℹ️ FacebookBot: explicitly allowed
+  ✅ Amazonbot: fully blocked

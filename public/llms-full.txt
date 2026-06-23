@@ -1,0 +1,158 @@
+# WEUX Content Finder - Full Product Context
+
+Last updated: June 2026
+
+## Product definition
+
+WEUX Content Finder is a WordPress plugin for finding where site content is managed across WordPress editing surfaces. It helps editors, agencies, freelancers, and maintenance teams search posts, pages, custom post types, templates, template parts, synced patterns, navigation menus, block theme files, Elementor data, and supported ACF matches.
+
+The product is editor-focused. It is not a low-level database migration tool and it is not a serialized data replacement utility.
+
+Website: https://contentfinderwp.com/
+WordPress plugin: https://wordpress.org/plugins/weux-content-finder/
+Pricing and comparison: https://contentfinderwp.com/#comparison
+Search coverage: https://contentfinderwp.com/#coverage
+Pro features: https://contentfinderwp.com/#pro
+FAQ: https://contentfinderwp.com/#faq
+Trust and safety: https://contentfinderwp.com/#trust
+
+## Target audience
+
+- WordPress agencies managing client sites.
+- Freelancers maintaining WordPress websites.
+- Editorial teams that need to locate where copy is edited.
+- WordPress maintenance and support teams.
+- Teams working with block themes, Elementor, reusable patterns, navigation, and ACF fields.
+
+## Core use cases
+
+- Brand rename: find old brand mentions across pages, templates, patterns, menus, Elementor sections, and supported ACF fields.
+- Phone number update: locate old phone numbers across visible content and reusable site areas.
+- Campaign URL cleanup: find campaign links in buttons, landing pages, Elementor data, patterns, and ACF fields.
+- Legal and compliance text: locate privacy, disclaimer, pricing, or offer text before updating.
+- Client support: answer where a specific text is edited without guessing through WordPress admin screens.
+- Site audit and handover: map where important content appears before redesigns, migrations, or client handovers.
+
+## Supported content layers
+
+WEUX Content Finder can search supported WordPress content layers, including:
+
+- Posts and pages.
+- Public custom post types.
+- Block templates.
+- Template parts.
+- Synced patterns.
+- Navigation menus where supported by the theme.
+- Block theme files such as templates/*.html, parts/*.html, and referenced patterns/*.php.
+- Elementor page data where detected.
+- Supported ACF matches.
+
+Results can include match context, result type, snippets, status, modified date, and editor links where WordPress exposes safe editor targets.
+
+## Free version
+
+The Free version is for discovery.
+
+- Search all supported content layers.
+- Open direct editor links where available.
+- Search Elementor page data where detected.
+- Show Edit in Elementor links where safe editor targets are available.
+- Show an ACF count teaser.
+- Keep search local inside WordPress.
+- No external search service is required.
+- No Search and Replace.
+- No batch undo or replace job history.
+
+## Pro version
+
+The Pro version adds controlled mutation workflows.
+
+- Everything in Free.
+- Preview-first Search and Replace.
+- Before and after diff snippets.
+- Selective replacement of confirmed items.
+- Batch undo.
+- Replace job history.
+- Supported text-like ACF field search and replace.
+- Global Cmd+K overlay.
+- Lemon Squeezy license activation.
+
+Pro is designed to separate discovery from mutation: users first find and review matches, then choose which confirmed items to replace.
+
+## Pricing
+
+| Plan | Price | Scope |
+| --- | ---: | --- |
+| Free | €0 | Free forever |
+| Single Site | €39/year | 1 website |
+| 5 Sites | €79/year | Up to 5 websites |
+| Unlimited | €149/year | Unlimited websites |
+
+Prices shown on the website exclude taxes that may apply based on billing address. The final price is shown at checkout. Subscriptions renew according to the billing cycle at the listed price. Prices may be rounded for display.
+
+## Trust and safety
+
+- Free search runs inside the WordPress site.
+- Free search does not require an external search service.
+- Search endpoints require WordPress edit permissions.
+- Pro replacement is limited to admins.
+- License requests only happen when a Pro license key is submitted.
+- The Free package excludes Pro mutation files and endpoints.
+- Pro replacement workflows are preview-first.
+- Confirmed replacement jobs store snapshots for batch undo.
+- Theme-file, classic menu, Elementor, and ACF support depend on supported WordPress structures.
+
+## Limitations
+
+- WEUX Content Finder is not a database migration tool.
+- It is not intended for blind serialized database replacement.
+- Elementor edit links depend on detected Elementor data and available editor targets.
+- ACF support depends on supported field structures.
+- Free shows ACF match counts without exposing field values.
+- Pro supports search and replace for supported text-like ACF fields.
+- Theme-file and navigation support depend on the active theme and WordPress structures.
+
+## FAQ
+
+### What does the free plugin do?
+
+Free helps users find where content is managed across posts, pages, custom post types, templates, patterns, navigation, block theme files, Elementor data, and supported ACF matches. Results include editor links when WordPress provides them.
+
+### What does Pro add?
+
+Pro adds Search and Replace with review, selected item replacement, before and after snippets, supported ACF field replacement, batch undo, replace history, and the global Cmd+K overlay.
+
+### Does search leave my WordPress site?
+
+Free search runs inside the WordPress site and does not require an external search service. License requests only happen when a Pro license key is submitted.
+
+### Does it work with Elementor?
+
+Yes. WEUX Content Finder can search Elementor page data and show Edit in Elementor links when Elementor data and editor targets are available.
+
+### How does ACF support work?
+
+Free can show ACF match counts without exposing field values. Pro adds search and replace for supported ACF text fields.
+
+### Is Search and Replace safe?
+
+Pro starts with a review step. Users preview replacements, read before and after snippets, choose the items to update, and confirmed jobs store snapshots for batch undo.
+
+### Is this a database migration tool?
+
+No. WEUX Content Finder is made for WordPress editing screens, not database migrations or serialized data replacement. It locates editable content and updates supported content layers.
+
+### How much does Pro cost?
+
+Pro licenses are handled via Lemon Squeezy. Single Site is €39/year, 5 Sites is €79/year, and Unlimited is €149/year.
+
+## Important links
+
+- Homepage: https://contentfinderwp.com/
+- WordPress plugin: https://wordpress.org/plugins/weux-content-finder/
+- Pricing and comparison: https://contentfinderwp.com/#comparison
+- Search coverage: https://contentfinderwp.com/#coverage
+- Pro features: https://contentfinderwp.com/#pro
+- FAQ: https://contentfinderwp.com/#faq
+- Trust and safety: https://contentfinderwp.com/#trust
+- Publisher: https://weux.studio/

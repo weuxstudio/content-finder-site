@@ -1,177 +1,155 @@
 # Full SEO Audit Report
 
-Scope: full-site audit for the local build at `http://localhost:4321/`, verified against generated `dist` output where possible.
+Scope: full-site SEO audit for the live production site `https://contentfinderwp.com`.
 
 Audit date: 2026-06-23
 
 ## A) Audit Summary
 
-Overall rating: Needs Improvement
+Overall rating: Good
 
-Estimated SEO health score: 64/100
+Estimated SEO health score: 86/100
 
-Score confidence: Medium. The audit has strong local/build evidence for markup, schema, sitemap, robots, metadata, internal links, and content. Core Web Vitals could not be measured because the PageSpeed API was rate-limited, and security headers were checked only against local dev HTTP, not production Cloudflare HTTPS.
+Score confidence: Medium-high. The audit used live production HTML and scripts for metadata, schema, robots, llms.txt, security headers, redirects, broken links, internal links, readability, sitemap, and 404 behavior. Core Web Vitals could not be measured because Google PageSpeed API was rate-limited.
 
-Business type detected: SaaS/software product landing page for a WordPress plugin.
+Business type detected: SaaS/software landing page for a WordPress plugin.
 
 Top 3 issues:
 
-1. JSON-LD schema is not rendering as valid JSON in `dist`.
-2. Canonical URLs are wrong on non-homepage routes.
-3. Sitemap and robots setup is incomplete.
+1. Production is missing HSTS and CSP headers.
+2. Core Web Vitals could not be confirmed due PageSpeed API rate limiting.
+3. Crawlable internal page graph is intentionally minimal; this is acceptable for now but limits future topic expansion.
 
 Top 3 opportunities:
 
-1. Add `/llms.txt` for AI search readiness.
-2. Remove FAQPage schema and keep visible FAQ only.
-3. Shorten social titles and improve production security headers.
+1. Add HSTS in Cloudflare and a measured CSP after testing Matomo and inline scripts.
+2. Rerun Lighthouse/PageSpeed later on production to capture mobile CWV.
+3. Optionally add richer social metadata and `llms-full.txt`.
 
 ## Evidence Collected
 
-- `npm run build`: successful; generated 5 pages.
-- `.seo-audit/page-summary.json`: route-level title, meta, canonical, headings, word count, schema snippets.
-- `.seo-audit/parse-dist-index.json`: generated homepage parse.
-- `.seo-audit/robots.txt`: robots and AI crawler analysis.
-- `.seo-audit/llms.txt`: llms.txt check.
-- `.seo-audit/social.txt`: Open Graph/Twitter metadata check.
-- `.seo-audit/internal-links.txt`: internal link crawl.
-- `.seo-audit/broken-links.txt`: broken link check.
-- `.seo-audit/readability-home.json`: readability metrics.
-- `.seo-audit/verified-findings.json`: verified findings list.
+- `.seo-audit-live/home.html`: fetched production homepage, HTTP 200.
+- `.seo-audit-live/parse-home.json`: parsed production homepage.
+- `.seo-audit-live/security.txt`: production security headers.
+- `.seo-audit-live/robots.txt`: robots and AI crawler management.
+- `.seo-audit-live/llms.txt`: live llms.txt analysis.
+- `.seo-audit-live/social.txt`: live Open Graph/Twitter analysis.
+- `.seo-audit-live/broken-links.txt`: live broken link check.
+- `.seo-audit-live/internal-links.txt`: live internal link crawl.
+- `.seo-audit-live/readability-home.json`: homepage readability.
+- `.seo-audit-live/notfound-check.json`: actual 404 behavior.
+- `.seo-audit-live/verified-findings.json`: verified findings list.
 
 Environment limitations:
 
-- `fetch_page.py` blocked `localhost` because it resolves to a private/internal IP, so local HTML was fetched with `curl`.
-- PageSpeed Insights was rate-limited by Google API, so CWV/Lighthouse metrics are not confirmed.
-- Security headers were checked against `http://localhost:4321/`; production Cloudflare headers still need deployed verification.
+- PageSpeed Insights was rate-limited by Google API, so LCP, INP, CLS, TBT, and Speed Index are not confirmed.
+- Visual screenshots were not part of this run.
 
 ## Category Scores
 
 | Category | Score | Confidence | Rationale |
 |---|---:|---|---|
-| Technical SEO | 58 | Medium | Build works and routes render, but canonical URLs are wrong, sitemap is incomplete, robots lacks Sitemap directive, and production security headers need verification. |
-| Content Quality | 78 | Medium | Homepage has substantial focused copy, clear product positioning, pricing, use cases, trust and FAQ content. Legal/404 pages are intentionally short. |
-| On-Page SEO | 72 | High | Titles/meta/H1s exist; social title is long and non-homepage canonicals are wrong. |
-| Schema / Structured Data | 20 | High | JSON-LD is emitted as literal `{JSON.stringify(...)}` and FAQPage schema should not be used for a commercial site. |
-| Performance / CWV | Insufficient data | Low | Build is static and Matomo is async, but PageSpeed was rate-limited; no confirmed LCP/INP/CLS values. |
-| Images | 88 | Medium | Logo images have appropriate alt handling; decorative icon has empty alt. OG image exists. No large image performance audit completed. |
-| AI Search Readiness | 62 | High | Robots has explicit AI crawler policy for many crawlers, but `llms.txt` is missing and several AI crawlers inherit default rules. |
+| Technical SEO | 88 | High | HTTPS, canonical, robots, noindex legal pages, sitemap, redirects, 404 behavior, and no broken links are good. Missing HSTS/CSP are the main penalty. |
+| Content Quality | 82 | Medium | Homepage has ~1,500 words, clear positioning, pricing, trust, FAQ, use cases, and product detail. Readability is appropriate for B2B/software. |
+| On-Page SEO | 90 | High | Title, meta description, H1, H2 structure, canonical, robots, and social title are in good shape. Optional social fields are missing. |
+| Schema / Structured Data | 92 | High | Valid `WebSite` and `SoftwareApplication` schema present; no broken literal JSON and no FAQPage schema. |
+| Performance / CWV | Insufficient data | Low | PageSpeed API was rate-limited; no confirmed production CWV metrics. |
+| Images | 90 | Medium | Logo alt handling is correct, OG image exists, and decorative mark uses empty alt. No image weight audit was completed. |
+| AI Search Readiness | 92 | High | `robots.txt` manages major AI crawlers and `llms.txt` exists with 95/100 quality score. |
 
 ## B) Findings Table
 
 | Area | Severity | Confidence | Finding | Evidence | Fix |
 |---|---|---|---|---|---|
-| Schema | Critical | Confirmed | JSON-LD structured data is emitted as literal template text instead of valid JSON. | `dist/index.html` contains `{JSON.stringify(webSiteSchema)}`, `{JSON.stringify(softwareSchema)}`, and `{JSON.stringify(faqSchema)}` inside `application/ld+json` scripts. | Render JSON-LD with Astro `set:html` or precomputed JSON strings; validate generated `dist/index.html`. |
-| Canonical | Critical | Confirmed | Every generated page uses the homepage canonical URL. | `page-summary.json` shows `https://contentfinderwp.com/` for homepage, imprint, privacy-policy, and 404. | Make canonical path-aware in `Layout.astro`; set legal pages to their own canonical URLs; omit canonical or noindex 404. |
-| Schema | Warning | Confirmed | FAQPage schema is included on a commercial software site where rich-result eligibility is restricted. | `Layout.astro` defines `faqSchema` globally. Skill rule: FAQPage rich results are restricted to government/health authority sites. | Remove FAQPage JSON-LD; keep visible FAQ section. |
-| Sitemap | Warning | Confirmed | Sitemap only lists the homepage and robots.txt has no Sitemap directive. | `dist/sitemap-0.xml` only includes `/`; robots checker reports no Sitemap directive. | Configure sitemap to include intended indexable pages and add `Sitemap: https://contentfinderwp.com/sitemap-index.xml` to `robots.txt`. |
-| AI Search Readiness | Warning | Confirmed | No `llms.txt` is available. | `llms_txt_checker.py` reports `/llms.txt` HTTP 404 and no `llms-full.txt`. | Add `/llms.txt` with product summary, key URLs, pricing, trust/safety notes, and concise facts. |
-| Robots | Warning | Confirmed | Some AI crawlers are not explicitly managed. | Robots checker reports `ChatGPT-User`, `anthropic-ai`, and `FacebookBot` inherit default rules. | Add explicit directives for these user agents according to the desired AI indexing/training policy. |
-| Social Meta | Warning | Confirmed | OG title is longer than recommended social preview length. | `social_meta.py` reports `og:title` is 70 chars; recommended max is 60. | Shorten default OG title, e.g. `WEUX Content Finder | WordPress content search`. |
-| Internal Linking | Warning | Confirmed | Internal link graph is thin and legal pages dominate internal anchors. | `internal_links.py`: 3 pages crawled, 8 internal links; top anchors are `Imprint` and `Privacy Policy`. | If separate feature/docs pages are added later, link them from footer/body. For current one-page site, keep key sections reachable and avoid over-weighting legal links. |
-| Security Headers | Warning | Likely | Local dev response lacks production security headers. | `security_headers.py` against localhost reports missing HSTS, CSP, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy. | Configure Cloudflare Pages headers via `_headers` or middleware; verify on deployed HTTPS. |
-| Performance | Info | Hypothesis | Matomo adds a third-party script that should be monitored. | `Layout.astro` loads `//analyse.marcweidemueller.de/matomo.js` globally; PageSpeed was rate-limited. | Keep Matomo async, verify cookie/privacy setup, and rerun Lighthouse/PageSpeed on production. |
+| Security Headers | Warning | Confirmed | HSTS and CSP headers are missing on production. | `security_headers.py`: HTTPS yes, `X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy` present; `Strict-Transport-Security` and `Content-Security-Policy` missing; score 65/100. | Add HSTS via Cloudflare and add a measured CSP that permits self-hosted assets, required inline scripts, and Matomo. |
+| Performance | Info | Hypothesis | Core Web Vitals could not be measured in this audit due PageSpeed API rate limiting. | `pagespeed.py` returned `Rate limited by Google API`. | Rerun PageSpeed/Lighthouse later or with an API key; capture mobile LCP, INP, CLS, TBT, and Speed Index. |
+| Internal Linking | Info | Confirmed | The crawlable internal page graph is intentionally small and dominated by legal links. | `internal_links.py`: 3 pages crawled, 8 internal links; top anchors are `Imprint` and `Privacy Policy`. | No urgent fix for a one-page landing page; if feature/docs pages are added, link them with descriptive anchors. |
+| Social Meta | Info | Confirmed | Optional Open Graph and Twitter profile tags are missing. | `social_meta.py`: `og:site_name`, `og:locale`, `twitter:site`, and `twitter:creator` missing as optional fields. | Optionally add those fields if brand social accounts exist. |
+| AI Search Readiness | Info | Confirmed | `llms.txt` is present and high quality; `llms-full.txt` is not present. | `llms_txt_checker.py`: found, 7 sections, 6 links, quality score 95/100; `llms-full.txt` not found. | Optional: add `llms-full.txt` if a longer machine-readable product brief is useful. |
+| 404 | Info | Confirmed | Actual unknown URLs return HTTP 404 and noindex; standalone `/404` resolves as a 200 page. | Unknown URL returns 404 with `noindex,follow`; `/404` and `/404.html` return 200 with noindex. | No urgent fix; optional canonical cleanup for `/404` route if desired. |
 
 ## Technical SEO
 
 Passes:
 
-- Static Astro build completes successfully.
-- Main route, legal pages, 404, sitemap files, and robots file are generated.
-- Broken link check found 0 broken links; 1 redirected external link.
-- Main page has title, meta description, canonical, H1, H2 hierarchy, OG and Twitter tags.
+- Homepage returns HTTP 200 over HTTPS.
+- No redirect chain on the canonical homepage.
+- Unknown URLs return HTTP 404 and include noindex.
+- Homepage canonical is `https://contentfinderwp.com/`.
+- Legal pages have route-specific canonicals and `noindex,follow`.
+- Sitemap index is present and references `sitemap-0.xml`.
+- Sitemap contains only the homepage, matching the intended indexation policy.
+- Broken link check found 0 broken links.
+- `robots.txt` includes Sitemap directive and explicit AI crawler rules.
 
-Issues:
+Remaining issue:
 
-- Canonical URLs are not route-specific.
-- JSON-LD is invalid in the built output.
-- Sitemap does not include legal pages and robots has no Sitemap directive.
-- 404 page uses homepage canonical through the shared layout.
-- Production headers need verification on deployed HTTPS.
+- Add HSTS and CSP on production.
 
 ## Content Quality
 
 Passes:
 
-- Homepage word count is ~1,500 words, which is adequate for a competitive software landing page.
-- Content covers problem, coverage, builder/ACF support, workflow, Pro features, pricing, trust, FAQ, and use cases.
-- Positioning is clear: editor-focused WordPress content search, not a generic database migration tool.
-- Readability is suitable for an educated B2B/software audience: Flesch Reading Ease 50.9, grade 9.5.
+- Homepage has 1,527 parsed words.
+- Product positioning is clear: WordPress content search and editor links, with Pro preview-first replacement workflow.
+- Page covers problem, coverage, builder/ACF support, workflow, Pro, pricing, use cases, trust, FAQ, and CTA.
+- Readability is suitable for an educated B2B/software audience: Flesch Reading Ease 50.9, Flesch-Kincaid grade 9.5.
 
-Issues:
+Notes:
 
-- Readability script reports a paragraph-length warning, likely because minified/generated HTML collapses paragraph detection. Treat as low-confidence; visually the page is sectioned.
-- Legal pages are intentionally short; that is acceptable because they are not primary SEO landing pages.
+- The readability script flags paragraph length because generated HTML collapses text extraction; visually the page is sectioned and scannable.
 
 ## On-Page SEO
 
 Passes:
 
-- Homepage title: `WEUX Content Finder | Find WordPress content and open the right editor`.
-- Homepage meta description: focused and under typical truncation thresholds.
-- Each generated page has one H1.
-- Main page has meaningful H2 sections and conversion CTAs.
+- SEO title: `WEUX Content Finder | Find WordPress content and open the right editor`.
+- Social title: `WEUX Content Finder | WordPress content search`.
+- Meta description is focused and concise.
+- One H1 is present.
+- H2 sections map to product intent and feature coverage.
+- Open Graph and Twitter Card basics are present.
 
-Issues:
+Optional improvement:
 
-- Social title is too long for ideal preview rendering.
-- Legal and 404 pages inherit the homepage canonical.
-- Open Graph URL is globally the homepage. That is fine for the homepage but wrong for route-specific sharing.
+- Add `og:site_name`, `og:locale`, `twitter:site`, and `twitter:creator` if desired.
 
 ## Schema & Structured Data
 
-Critical issue:
+Passes:
 
-- Current JSON-LD output is invalid because Astro is outputting literal template expressions.
-
-Additional issue:
-
-- FAQPage schema should be removed for this commercial software site. Visible FAQ content is still useful; the structured data is the problem.
-
-Recommended schema after fixing rendering:
-
-- `WebSite` on homepage.
-- `SoftwareApplication` on homepage only.
-- Optional `Organization` for WEUX Studio/WEUX Content Finder relationship.
-- Avoid `FAQPage` for rich result eligibility.
+- Valid `WebSite` schema is present.
+- Valid `SoftwareApplication` schema is present.
+- Offers are included for Free, Single Site, 5 Sites, and Unlimited.
+- No broken literal `{JSON.stringify(...)}` output.
+- No `FAQPage` schema on the commercial site.
 
 ## Sitemap & Robots
 
-Robots positives:
+Passes:
 
-- Default crawler can access the site.
-- Several AI crawlers are explicitly allowed or blocked.
-- Training-oriented crawlers such as `Applebot-Extended`, `CCBot`, and `Bytespider` are blocked.
-
-Robots gaps:
-
-- Missing `Sitemap:` directive.
-- `ChatGPT-User`, `anthropic-ai`, and `FacebookBot` are not explicitly managed.
-
-Sitemap gaps:
-
-- Sitemap currently lists only `https://contentfinderwp.com/`.
-- Legal pages are not included. If legal pages should be discoverable from search, include them; if not, leave out intentionally and consider `noindex`.
-- 404 should not be included, and currently is not.
+- `robots.txt` returns HTTP 200.
+- Sitemap directive points to `https://contentfinderwp.com/sitemap-index.xml`.
+- Major AI crawler rules are explicit.
+- Training-only crawlers such as `Applebot-Extended`, `CCBot`, `Bytespider`, and `Amazonbot` are blocked.
+- GPTBot, ChatGPT-User, ClaudeBot, PerplexityBot, Google-Extended, anthropic-ai, and FacebookBot are explicitly allowed.
 
 ## AI Search / GEO Readiness
 
 Passes:
 
-- Product copy is concise and answer-like.
-- Pricing, feature distinctions, trust/privacy limitations, and use cases are visible.
-- Robots already includes a directional AI crawler policy.
+- `llms.txt` returns HTTP 200.
+- Quality score: 95/100.
+- Product facts, pricing, trust/safety, and important links are included.
+- Homepage copy is structured around answerable product facts.
 
-Gaps:
+Optional improvement:
 
-- Missing `/llms.txt`.
-- Invalid JSON-LD weakens machine readability.
-- No route-specific canonical URLs weakens citation confidence for legal pages.
+- Add `llms-full.txt` if a longer, more detailed machine-readable reference is useful.
 
 ## D) Unknowns and Follow-ups
 
-- Production Core Web Vitals: rerun PageSpeed/Lighthouse on `https://contentfinderwp.com/` after deploy.
-- Production security headers: verify via deployed HTTPS response, not localhost.
-- Production Matomo behavior: confirm whether Matomo cookies are disabled or whether privacy copy/cookie posture must be adjusted.
-- Search Console status: not checked; verify indexing, submitted sitemap, and canonical selection after deploy.
+- Core Web Vitals: rerun PageSpeed/Lighthouse once the API rate limit clears.
+- Production CSP: should be tested carefully with Matomo and inline scripts before enforcing.
+- Search Console: not checked; verify submitted sitemap and Google-selected canonical after deployment settles.
 

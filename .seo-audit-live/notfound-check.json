@@ -1,0 +1,23 @@
+[
+  {
+    "url": "https://contentfinderwp.com/this-page-should-not-exist-seo-check",
+    "status": 404,
+    "final_url": "https://contentfinderwp.com/this-page-should-not-exist-seo-check",
+    "title": "Page Not Found | WEUX Content Finder",
+    "robots": true
+  },
+  {
+    "url": "https://contentfinderwp.com/404.html",
+    "status": 200,
+    "final_url": "https://contentfinderwp.com/404",
+    "title": "Page Not Found | WEUX Content Finder",
+    "robots": true
+  },
+  {
+    "url": "https://contentfinderwp.com/404",
+    "status": 200,
+    "final_url": "https://contentfinderwp.com/404",
+    "title": "Page Not Found | WEUX Content Finder",
+    "robots": true
+  }
+]

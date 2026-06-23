@@ -1,0 +1,23 @@
+Security Headers — https://contentfinderwp.com
+==================================================
+✅ HTTPS: Yes
+Security Score: 65/100
+
+✅ Present (4):
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+❌ Missing (2):
+  HSTS (Strict-Transport-Security)
+    → Forces browsers to use HTTPS. Prevents downgrade attacks.
+  Content-Security-Policy (CSP)
+    → Prevents XSS, clickjacking, and code injection.
+
+Issues:
+  ⚠️ 2 security header(s) missing
+
+Recommendations:
+  💡 HSTS (Strict-Transport-Security): Add header: Strict-Transport-Security: max-age=31536000; includeSubDomains
+  💡 Content-Security-Policy (CSP): Add a Content-Security-Policy header restricting script/style sources.

@@ -4,8 +4,6 @@
 
 Website: [WEUX Content Finder](https://contentfinderwp.com/)
 WordPress plugin: [WEUX Content Finder on WordPress.org](https://wordpress.org/plugins/weux-content-finder/)
-Full product context: [llms-full.txt](https://contentfinderwp.com/llms-full.txt)
-Last updated: June 2026
 
 ## Who it is for
 

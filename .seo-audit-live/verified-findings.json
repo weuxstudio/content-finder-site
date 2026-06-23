@@ -1,0 +1,61 @@
+{
+  "findings": [
+    {
+      "area": "Security Headers",
+      "severity": "Warning",
+      "confidence": "Confirmed",
+      "finding": "HSTS and CSP headers are missing on production.",
+      "evidence": "security_headers.py reports HTTPS yes and four headers present, but Strict-Transport-Security and Content-Security-Policy missing; security score 65/100.",
+      "fix": "Add HSTS via Cloudflare and add a measured CSP that permits self, required inline scripts, and Matomo.",
+      "sources": []
+    },
+    {
+      "area": "Performance",
+      "severity": "Info",
+      "confidence": "Hypothesis",
+      "finding": "Core Web Vitals could not be measured in this audit due PageSpeed API rate limiting.",
+      "evidence": "pagespeed.py returned 'Rate limited by Google API'.",
+      "fix": "Rerun PageSpeed/Lighthouse later or with an API key; record mobile LCP, INP, CLS, TBT, and Speed Index.",
+      "sources": []
+    },
+    {
+      "area": "Internal Linking",
+      "severity": "Info",
+      "confidence": "Confirmed",
+      "finding": "The crawlable internal page graph is intentionally small and dominated by legal links.",
+      "evidence": "internal_links.py crawled 3 pages, found 8 internal links, and top anchors were Imprint and Privacy Policy.",
+      "fix": "No urgent fix for a one-page landing page; if feature/docs pages are added, link them from body/footer with descriptive anchors.",
+      "sources": []
+    },
+    {
+      "area": "Social Meta",
+      "severity": "Info",
+      "confidence": "Confirmed",
+      "finding": "Optional Open Graph and Twitter profile tags are missing.",
+      "evidence": "social_meta.py score 69/100; og:site_name, og:locale, twitter:site, and twitter:creator are missing as optional fields.",
+      "fix": "Optionally add og:site_name, og:locale, twitter:site, and twitter:creator if brand social accounts exist.",
+      "sources": []
+    },
+    {
+      "area": "AI Search Readiness",
+      "severity": "Info",
+      "confidence": "Confirmed",
+      "finding": "llms.txt is present and high quality; llms-full.txt is not present.",
+      "evidence": "llms_txt_checker reports /llms.txt found, 7 sections, 6 links, quality score 95/100, and llms-full.txt not found.",
+      "fix": "Optional: add llms-full.txt later if a longer machine-readable product brief is useful.",
+      "sources": []
+    },
+    {
+      "area": "404",
+      "severity": "Info",
+      "confidence": "Confirmed",
+      "finding": "Actual unknown URLs return HTTP 404 and noindex, while the standalone /404 route resolves as a 200 page.",
+      "evidence": "notfound-check.json: unknown URL returns 404 with noindex; /404 and /404.html return 200 with noindex.",
+      "fix": "No urgent fix; optional canonical cleanup for /404 route if desired.",
+      "sources": []
+    }
+  ],
+  "dropped": [],
+  "raw_count": 6,
+  "verified_count": 6
+}
