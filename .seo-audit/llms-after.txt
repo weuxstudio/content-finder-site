@@ -1,0 +1,16 @@
+llms.txt Check — http://localhost:4321/llms.txt
+==================================================
+Status: ✅ Found (HTTP 200)
+Title: WEUX Content Finder
+Description: WEUX Content Finder is a WordPress plugin that helps editors and site teams find where content is managed across posts, pages, custom post types, templates, patterns, navigation, Elementor data, and supported ACF fields.
+Sections: 7
+Links: 0
+Quality Score: 70/100
+
+llms-full.txt: ❌ Not found
+
+Issues:
+  ⚠️ No links found
+
+Suggestions:
+  💡 Add key page links: - [Page Title](URL): Description

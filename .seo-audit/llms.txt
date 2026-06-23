@@ -1,0 +1,11 @@
+llms.txt Check — http://localhost:4321/llms.txt
+==================================================
+Status: 🔴 Not found (HTTP 404)
+
+llms-full.txt: ❌ Not found
+
+Issues:
+  🔴 No llms.txt found
+
+Suggestions:
+  💡 Create /llms.txt with site name, description, and key page links

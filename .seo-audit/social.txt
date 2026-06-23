@@ -1,0 +1,28 @@
+Social Meta Tags — http://localhost:4321/
+==================================================
+Score: 69/100
+
+Open Graph (5/7):
+  ✅ og:title: WEUX Content Finder | Find WordPress content and open the ri...
+  ✅ og:description: Search posts, pages, custom post types, templates, patterns,...
+  ✅ og:image: https://contentfinderwp.com/og-image.png
+  ✅ og:url: https://contentfinderwp.com/
+  ✅ og:type: website
+  ℹ️ og:site_name: missing (optional)
+  ℹ️ og:locale: missing (optional)
+
+Twitter Card (4/6):
+  ✅ twitter:card: summary_large_image
+  ✅ twitter:title: WEUX Content Finder | Find WordPress content and open the ri
+  ✅ twitter:description: Search posts, pages, custom post types, templates, patterns,
+  ✅ twitter:image: https://contentfinderwp.com/og-image.png
+  ℹ️ twitter:site: missing (optional)
+  ℹ️ twitter:creator: missing (optional)
+
+Social Preview:
+  Title: WEUX Content Finder | Find WordPress content and open the right editor
+  Description: Search posts, pages, custom post types, templates, patterns, navigation, Element
+  Image: https://contentfinderwp.com/og-image.png
+
+Issues:
+  ⚠️ og:title is too long (70 chars, max 60)

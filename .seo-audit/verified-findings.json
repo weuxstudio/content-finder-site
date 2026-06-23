@@ -1,0 +1,97 @@
+{
+  "findings": [
+    {
+      "area": "Schema",
+      "severity": "Critical",
+      "confidence": "Confirmed",
+      "finding": "JSON-LD structured data is emitted as literal template text instead of valid JSON.",
+      "evidence": "dist/index.html contains three application/ld+json blocks with raw content {JSON.stringify(webSiteSchema)}, {JSON.stringify(softwareSchema)}, and {JSON.stringify(faqSchema)}.",
+      "fix": "Render JSON-LD with Astro set:html or precomputed JSON strings; validate dist/index.html after build.",
+      "sources": []
+    },
+    {
+      "area": "Canonical",
+      "severity": "Critical",
+      "confidence": "Confirmed",
+      "finding": "Every generated page uses the homepage canonical URL.",
+      "evidence": "page-summary.json shows canonical https://contentfinderwp.com/ for index, imprint, privacy-policy, and 404.html.",
+      "fix": "Make canonical path-aware in Layout.astro; set /imprint/ and /privacy-policy/ canonicals to their own URLs; omit or noindex 404.",
+      "sources": []
+    },
+    {
+      "area": "Schema",
+      "severity": "Warning",
+      "confidence": "Confirmed",
+      "finding": "FAQPage schema is included on a commercial software site where Google rich-result eligibility is restricted.",
+      "evidence": "Layout.astro includes faqSchema globally; generated pages contain a FAQPage JSON-LD placeholder. SEO skill rule: FAQPage rich results are restricted to government/health authority sites.",
+      "fix": "Remove FAQPage JSON-LD from commercial pages; keep visible FAQ content but do not emit FAQPage schema.",
+      "sources": []
+    },
+    {
+      "area": "Sitemap",
+      "severity": "Warning",
+      "confidence": "Confirmed",
+      "finding": "Sitemap only lists the homepage and robots.txt has no Sitemap directive.",
+      "evidence": "dist/sitemap-0.xml contains only https://contentfinderwp.com/; robots checker reports 'No Sitemap directive found in robots.txt'.",
+      "fix": "Configure Astro sitemap to include intended indexable routes and add Sitemap: https://contentfinderwp.com/sitemap-index.xml to robots.txt.",
+      "sources": []
+    },
+    {
+      "area": "AI Search Readiness",
+      "severity": "Warning",
+      "confidence": "Confirmed",
+      "finding": "No llms.txt is available.",
+      "evidence": "llms_txt_checker reports /llms.txt HTTP 404 and llms-full.txt not found.",
+      "fix": "Add /llms.txt with product summary, key URLs, pricing, trust/safety notes, and docs-like concise facts.",
+      "sources": []
+    },
+    {
+      "area": "Robots",
+      "severity": "Warning",
+      "confidence": "Confirmed",
+      "finding": "Some AI crawlers are not explicitly managed.",
+      "evidence": "robots checker reports ChatGPT-User, anthropic-ai, and FacebookBot inherit default rules.",
+      "fix": "Add explicit user-agent directives for these crawlers according to desired AI indexing/training policy.",
+      "sources": []
+    },
+    {
+      "area": "Social Meta",
+      "severity": "Warning",
+      "confidence": "Confirmed",
+      "finding": "OG title is longer than recommended social preview length.",
+      "evidence": "social_meta.py reports og:title is 70 chars, max 60.",
+      "fix": "Shorten default OG title, e.g. 'WEUX Content Finder | WordPress content search'.",
+      "sources": []
+    },
+    {
+      "area": "Internal Linking",
+      "severity": "Warning",
+      "confidence": "Confirmed",
+      "finding": "Internal link graph is thin and legal pages dominate internal anchors.",
+      "evidence": "internal_links.py crawled 3 pages, found only 8 internal links; top anchors are Imprint and Privacy Policy; homepage parse only lists legal internal links because hash links are not page URLs.",
+      "fix": "Add meaningful internal links to /imprint/ and /privacy-policy/ only where needed; consider real section URLs only if adding separate pages later. Ensure footer links support key conversion pages.",
+      "sources": []
+    },
+    {
+      "area": "Security Headers",
+      "severity": "Warning",
+      "confidence": "Likely",
+      "finding": "Local dev response lacks production security headers.",
+      "evidence": "security_headers.py against localhost reports missing HSTS, CSP, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, and Permissions-Policy. Local HTTP is not production evidence.",
+      "fix": "Configure Cloudflare Pages headers via _headers or middleware for production; verify on deployed HTTPS URL.",
+      "sources": []
+    },
+    {
+      "area": "Performance",
+      "severity": "Info",
+      "confidence": "Hypothesis",
+      "finding": "Matomo adds a third-party script that should be monitored for performance and privacy impact.",
+      "evidence": "Layout.astro loads //analyse.marcweidemueller.de/matomo.js globally. PageSpeed was rate-limited, so no CWV metric was measured.",
+      "fix": "Keep Matomo async, verify no cookies if desired, and re-run PageSpeed/Lighthouse on production.",
+      "sources": []
+    }
+  ],
+  "dropped": [],
+  "raw_count": 10,
+  "verified_count": 10
+}

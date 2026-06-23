@@ -2,7 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Page Not Found | WEUX Content Finder" description="The page you are looking for could not be found. Return to WEUX Content Finder or download the WordPress plugin.">
+<Layout
+  title="Page Not Found | WEUX Content Finder"
+  description="The page you are looking for could not be found. Return to WEUX Content Finder or download the WordPress plugin."
+  canonicalPath="/404.html"
+  robots="noindex,follow"
+>
   <nav class="nav">
     <div class="wrap nav-inner">
       <a href="/" class="nav-logo" aria-label="WEUX Content Finder home">

@@ -1,0 +1,218 @@
+{
+  "title": "WEUX Content Finder | Find WordPress content and open the right editor",
+  "meta_description": "Search posts, pages, custom post types, templates, patterns, navigation, Elementor data, and ACF fields from one WordPress admin screen.",
+  "meta_robots": "index,follow",
+  "canonical": "https://contentfinderwp.com/",
+  "h1": [
+    "FindandfixWordPresscontentfaster."
+  ],
+  "h2": [
+    "WordPress content isscattered everywhere.",
+    "Search the placesWordPress stores content.",
+    "Builder search,careful field handling.",
+    "Search, filter, inspect,open editor.",
+    "Review changes beforeyou replace content.",
+    "Choose your plan.",
+    "Common use cases.",
+    "Built for realWordPress sites.",
+    "Questions beforeyou install?",
+    "Start finding contentfaster."
+  ],
+  "h3": [
+    "Posts & Pages",
+    "Custom Post Types",
+    "Block Templates",
+    "Synced Patterns",
+    "Navigation Menus",
+    "Block Theme Files",
+    "Elementor Data",
+    "ACF Teaser",
+    "Elementor in Free",
+    "ACF in Free",
+    "ACF in Pro",
+    "Search",
+    "Filter",
+    "Inspect",
+    "Open Editor",
+    "ProReplacement Preview",
+    "ProSelective Replacement",
+    "ProBatch Undo",
+    "ProACF Field Replacement",
+    "ProGlobal Cmd+K Overlay",
+    "ProReplace Job History",
+    "Brand Rename",
+    "Phone Number Update",
+    "Campaign URL Cleanup",
+    "Legal & Compliance Text",
+    "Client Support",
+    "Site Audit & Handover",
+    "Local Search",
+    "Permission Checks",
+    "Replacement Review",
+    "Batch Undo",
+    "License Privacy",
+    "Clean Separation",
+    "Editor Tools",
+    "Supported Structures"
+  ],
+  "images": [
+    {
+      "src": "https://contentfinderwp.com/header-logo-mark.svg",
+      "alt": "",
+      "width": null,
+      "height": null,
+      "loading": null
+    },
+    {
+      "src": "https://contentfinderwp.com/header-logo-wordmark.svg",
+      "alt": "WEUX Content Finder",
+      "width": null,
+      "height": null,
+      "loading": null
+    },
+    {
+      "src": "https://contentfinderwp.com/footer-logo.svg",
+      "alt": "WEUX Content Finder",
+      "width": null,
+      "height": null,
+      "loading": null
+    }
+  ],
+  "links": {
+    "internal": [
+      {
+        "href": "https://contentfinderwp.com/imprint/",
+        "text": "Imprint",
+        "rel": []
+      },
+      {
+        "href": "https://contentfinderwp.com/privacy-policy/",
+        "text": "Privacy Policy",
+        "rel": []
+      }
+    ],
+    "external": [
+      {
+        "href": "https://wordpress.org/plugins/weux-content-finder/",
+        "text": "Get Free",
+        "rel": [
+          "noopener",
+          "noreferrer"
+        ]
+      },
+      {
+        "href": "https://wordpress.org/plugins/weux-content-finder/",
+        "text": "Download Free \u2192",
+        "rel": [
+          "noopener",
+          "noreferrer"
+        ]
+      },
+      {
+        "href": "https://wordpress.org/plugins/weux-content-finder/",
+        "text": "Download Free Plugin \u2192",
+        "rel": [
+          "noopener",
+          "noreferrer"
+        ]
+      },
+      {
+        "href": "https://wordpress.org/plugins/weux-content-finder/",
+        "text": "Download Free",
+        "rel": [
+          "noopener",
+          "noreferrer"
+        ]
+      },
+      {
+        "href": "https://weux.studio/",
+        "text": "weux.studio",
+        "rel": [
+          "noopener",
+          "noreferrer"
+        ]
+      }
+    ]
+  },
+  "schema": [
+    {
+      "@type": "WebSite",
+      "@context": "https://schema.org",
+      "status": "active",
+      "note": "",
+      "has_context": true,
+      "has_type": true,
+      "raw": {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "WEUX Content Finder",
+        "url": "https://contentfinderwp.com/",
+        "description": "Find text across WordPress posts, pages, custom post types, templates, patterns, navigation, Elementor data, and ACF fields. Open the matching edit screen from each result.",
+        "applicationCategory": "WordPress Plugin",
+        "operatingSystem": "WordPress 6.0+"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@context": "https://schema.org",
+      "status": "active",
+      "note": "",
+      "has_context": true,
+      "has_type": true,
+      "raw": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "WEUX Content Finder",
+        "operatingSystem": "WordPress 6.0+",
+        "applicationCategory": "Plugin",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Free",
+            "price": "0",
+            "priceCurrency": "EUR",
+            "priceValidUntil": "2030-12-31"
+          },
+          {
+            "@type": "Offer",
+            "name": "Single Site",
+            "price": "39",
+            "priceCurrency": "EUR",
+            "priceValidUntil": "2030-12-31"
+          },
+          {
+            "@type": "Offer",
+            "name": "5 Sites",
+            "price": "79",
+            "priceCurrency": "EUR",
+            "priceValidUntil": "2030-12-31"
+          },
+          {
+            "@type": "Offer",
+            "name": "Unlimited",
+            "price": "149",
+            "priceCurrency": "EUR",
+            "priceValidUntil": "2030-12-31"
+          }
+        ]
+      }
+    }
+  ],
+  "open_graph": {
+    "og:type": "website",
+    "og:url": "https://contentfinderwp.com/",
+    "og:title": "WEUX Content Finder | WordPress content search",
+    "og:description": "Search posts, pages, custom post types, templates, patterns, navigation, Elementor data, and ACF fields from one WordPress admin screen.",
+    "og:image": "https://contentfinderwp.com/og-image.png",
+    "og:image:width": "1200",
+    "og:image:height": "630"
+  },
+  "twitter_card": {
+    "twitter:card": "summary_large_image",
+    "twitter:title": "WEUX Content Finder | WordPress content search",
+    "twitter:description": "Search posts, pages, custom post types, templates, patterns, navigation, Elementor data, and ACF fields from one WordPress admin screen.",
+    "twitter:image": "https://contentfinderwp.com/og-image.png"
+  },
+  "word_count": 1527,
+  "hreflang": []
+}

@@ -1,0 +1,146 @@
+[
+  {
+    "file": "dist/index.html",
+    "title": "WEUX Content Finder | Find WordPress content and open the right editor",
+    "metaDescription": "Search posts, pages, custom post types, templates, patterns, navigation, Elementor data, and ACF fields from one WordPress admin screen.",
+    "canonical": "https://contentfinderwp.com/",
+    "h1": [
+      "Find and fixWordPress contentfaster."
+    ],
+    "h2": [
+      "WordPress content isscattered everywhere.",
+      "Search the placesWordPress stores content.",
+      "Builder search,careful field handling.",
+      "Search, filter, inspect,open editor.",
+      "Review changes beforeyou replace content.",
+      "Choose your plan.",
+      "Common use cases.",
+      "Built for realWordPress sites.",
+      "Questions beforeyou install?",
+      "Start finding contentfaster."
+    ],
+    "wordCount": 1642,
+    "schemaRaw": [
+      "{JSON.stringify(webSiteSchema)}",
+      "{JSON.stringify(softwareSchema)}",
+      "{JSON.stringify(faqSchema)}"
+    ],
+    "images": [
+      {
+        "tag": "<img class=\"nav-logo-mark\" src=\"/header-logo-mark.svg\" alt=\"\">",
+        "alt": ""
+      },
+      {
+        "tag": "<img class=\"nav-logo-wordmark\" src=\"/header-logo-wordmark.svg\" alt=\"WEUX Content Finder\">",
+        "alt": "WEUX Content Finder"
+      },
+      {
+        "tag": "<img src=\"/footer-logo.svg\" alt=\"WEUX Content Finder\">",
+        "alt": "WEUX Content Finder"
+      }
+    ]
+  },
+  {
+    "file": "dist/imprint/index.html",
+    "title": "Imprint | WEUX Content Finder",
+    "metaDescription": "Legal information about WEUX Content Finder: contact details, responsible person, and legal disclosure according to German law.",
+    "canonical": "https://contentfinderwp.com/",
+    "h1": [
+      "Imprint"
+    ],
+    "h2": [
+      "Responsible Operator",
+      "Contact",
+      "VAT",
+      "Responsible for Editorial Content",
+      "Dispute Resolution"
+    ],
+    "wordCount": 184,
+    "schemaRaw": [
+      "{JSON.stringify(webSiteSchema)}",
+      "{JSON.stringify(softwareSchema)}",
+      "{JSON.stringify(faqSchema)}"
+    ],
+    "images": [
+      {
+        "tag": "<img class=\"nav-logo-mark\" src=\"/header-logo-mark.svg\" alt=\"\">",
+        "alt": ""
+      },
+      {
+        "tag": "<img class=\"nav-logo-wordmark\" src=\"/header-logo-wordmark.svg\" alt=\"WEUX Content Finder\">",
+        "alt": "WEUX Content Finder"
+      },
+      {
+        "tag": "<img src=\"/footer-logo.svg\" alt=\"WEUX Content Finder\">",
+        "alt": "WEUX Content Finder"
+      }
+    ]
+  },
+  {
+    "file": "dist/privacy-policy/index.html",
+    "title": "Privacy Policy | WEUX Content Finder",
+    "metaDescription": "Privacy policy for WEUX Content Finder: information on data processing, hosting, external links, and your rights under GDPR.",
+    "canonical": "https://contentfinderwp.com/",
+    "h1": [
+      "Privacy Policy"
+    ],
+    "h2": [
+      "1. Data Protection at a Glance",
+      "2. Responsible Body",
+      "3. Hosting",
+      "4. Cookies",
+      "5. External Links",
+      "6. Your Rights"
+    ],
+    "wordCount": 425,
+    "schemaRaw": [
+      "{JSON.stringify(webSiteSchema)}",
+      "{JSON.stringify(softwareSchema)}",
+      "{JSON.stringify(faqSchema)}"
+    ],
+    "images": [
+      {
+        "tag": "<img class=\"nav-logo-mark\" src=\"/header-logo-mark.svg\" alt=\"\">",
+        "alt": ""
+      },
+      {
+        "tag": "<img class=\"nav-logo-wordmark\" src=\"/header-logo-wordmark.svg\" alt=\"WEUX Content Finder\">",
+        "alt": "WEUX Content Finder"
+      },
+      {
+        "tag": "<img src=\"/footer-logo.svg\" alt=\"WEUX Content Finder\">",
+        "alt": "WEUX Content Finder"
+      }
+    ]
+  },
+  {
+    "file": "dist/404.html",
+    "title": "Page Not Found | WEUX Content Finder",
+    "metaDescription": "The page you are looking for could not be found. Return to WEUX Content Finder or download the WordPress plugin.",
+    "canonical": "https://contentfinderwp.com/",
+    "h1": [
+      "Content not found."
+    ],
+    "h2": [],
+    "wordCount": 116,
+    "schemaRaw": [
+      "{JSON.stringify(webSiteSchema)}",
+      "{JSON.stringify(softwareSchema)}",
+      "{JSON.stringify(faqSchema)}"
+    ],
+    "images": [
+      {
+        "tag": "<img class=\"nav-logo-mark\" src=\"/header-logo-mark.svg\" alt=\"\">",
+        "alt": ""
+      },
+      {
+        "tag": "<img class=\"nav-logo-wordmark\" src=\"/header-logo-wordmark.svg\" alt=\"WEUX Content Finder\">",
+        "alt": "WEUX Content Finder"
+      },
+      {
+        "tag": "<img src=\"/footer-logo.svg\" alt=\"WEUX Content Finder\">",
+        "alt": "WEUX Content Finder"
+      }
+    ]
+  }
+]

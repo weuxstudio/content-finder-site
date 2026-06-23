@@ -1,0 +1,63 @@
+# WEUX Content Finder
+
+> WEUX Content Finder is a WordPress plugin that helps editors and site teams find where content is managed across posts, pages, custom post types, templates, patterns, navigation, Elementor data, and supported ACF fields.
+
+Website: [WEUX Content Finder](https://contentfinderwp.com/)
+WordPress plugin: [WEUX Content Finder on WordPress.org](https://wordpress.org/plugins/weux-content-finder/)
+
+## Who it is for
+
+- WordPress agencies
+- Freelancers maintaining client sites
+- Editorial teams
+- WordPress maintenance and support teams
+
+## Core capabilities
+
+- Search content across WordPress posts, pages, custom post types, templates, template parts, synced patterns, navigation menus, block theme files, Elementor data, and supported ACF matches.
+- Show match context, result type, snippets, status, and editor links where WordPress provides them.
+- Open the best available editor target, including Site Editor, Elementor, or the standard WordPress editor when available.
+- Keep discovery separate from mutation: Free finds content; Pro adds reviewed Search and Replace workflows.
+
+## Free version
+
+- Search all supported content layers.
+- Direct editor links where available.
+- Elementor links where detected.
+- ACF count teaser.
+- No Search and Replace.
+
+## Pro version
+
+- Everything in Free.
+- Search and Replace with preview.
+- Before/after diffs.
+- Selective replacement.
+- Batch undo.
+- Replace job history.
+- Supported text-like ACF field search and replace.
+- Global Cmd+K overlay.
+- Lemon Squeezy license activation.
+
+## Pricing
+
+- Free: €0
+- Single Site: €39/year
+- 5 Sites: €79/year
+- Unlimited: €149/year
+
+## Trust and safety
+
+- Free search runs inside WordPress and does not require an external search service.
+- The product is editor-focused and is not a database migration tool.
+- Theme-file, classic menu, Elementor, and ACF support depend on supported WordPress structures.
+- Pro replacement workflows are preview-first and designed around review, selected updates, job history, and undo.
+
+## Important pages
+
+- [Homepage](https://contentfinderwp.com/): Product overview and primary download path.
+- [Pricing and comparison](https://contentfinderwp.com/#comparison): Free, Single Site, 5 Sites, and Unlimited plans.
+- [Search coverage](https://contentfinderwp.com/#coverage): Supported WordPress content layers.
+- [Pro features](https://contentfinderwp.com/#pro): Preview-first Search and Replace workflow.
+- [FAQ](https://contentfinderwp.com/#faq): Common installation, privacy, Elementor, ACF, and pricing questions.
+- [Trust and safety](https://contentfinderwp.com/#trust): Local search, license privacy, replacement review, and supported structures.

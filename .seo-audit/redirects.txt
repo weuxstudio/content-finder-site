@@ -1,0 +1,6 @@
+Redirect Chain — http://localhost:4321/
+==================================================
+  ✅ [200] http://localhost:4321/ (7ms) — FINAL
+
+Total hops: 0 | Total time: 7ms
+

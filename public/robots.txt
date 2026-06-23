@@ -22,6 +22,15 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
 # Block training-only crawlers
 User-agent: Applebot-Extended
 Disallow: /
@@ -40,3 +49,5 @@ Disallow: /
 
 User-agent: CloudflareBrowserRenderingCrawler
 Disallow: /
+
+Sitemap: https://contentfinderwp.com/sitemap-index.xml

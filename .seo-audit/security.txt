@@ -1,0 +1,29 @@
+Security Headers — http://localhost:4321/
+==================================================
+🔴 HTTPS: No
+Security Score: 0/100
+
+❌ Missing (6):
+  HSTS (Strict-Transport-Security)
+    → Forces browsers to use HTTPS. Prevents downgrade attacks.
+  Content-Security-Policy (CSP)
+    → Prevents XSS, clickjacking, and code injection.
+  X-Frame-Options
+    → Prevents clickjacking by controlling iframe embedding.
+  X-Content-Type-Options
+    → Prevents MIME-type sniffing.
+  Referrer-Policy
+    → Controls how much referrer info is shared.
+  Permissions-Policy
+    → Controls browser feature access (camera, microphone, geolocation).
+
+Issues:
+  🔴 Site not using HTTPS — critical for SEO and trust
+  🔴 6 security headers missing — poor security posture
+
+Recommendations:
+  💡 Migrate to HTTPS and set up 301 redirects from HTTP
+  💡 HSTS (Strict-Transport-Security): Add header: Strict-Transport-Security: max-age=31536000; includeSubDomains
+  💡 Content-Security-Policy (CSP): Add a Content-Security-Policy header restricting script/style sources.
+  💡 X-Frame-Options: Add header: X-Frame-Options: SAMEORIGIN
+  💡 X-Content-Type-Options: Add header: X-Content-Type-Options: nosniff

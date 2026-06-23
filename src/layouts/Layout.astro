@@ -4,10 +4,26 @@ interface Props {
   title?: string;
   description?: string;
   image?: string;
+  canonicalPath?: string;
+  canonicalUrl?: string;
+  robots?: string;
+  socialTitle?: string;
+  includeProductSchema?: boolean;
 }
-const { title = 'WEUX Content Finder | Find WordPress content and open the right editor', description = 'Search across posts, pages, custom post types, templates, patterns, navigation, Elementor data, and ACF fields from one WordPress admin screen.', image = '/og-image.png' } = Astro.props;
+const {
+  title = 'WEUX Content Finder | Find WordPress content and open the right editor',
+  description = 'Search across posts, pages, custom post types, templates, patterns, navigation, Elementor data, and ACF fields from one WordPress admin screen.',
+  image = '/og-image.png',
+  canonicalPath = '/',
+  canonicalUrl,
+  robots,
+  socialTitle,
+  includeProductSchema = false,
+} = Astro.props;
 const baseUrl = import.meta.env.BASE_URL;
 const siteUrl = 'https://contentfinderwp.com/';
+const canonicalHref = canonicalUrl ?? new URL(canonicalPath, siteUrl).href;
+const socialMetaTitle = socialTitle ?? title;
 
 // --- Structured Data ---
 
@@ -35,20 +51,6 @@ const softwareSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    { "@type": "Question", "name": "What does the free plugin do?", "acceptedAnswer": { "@type": "Answer", "text": "Free helps you find where content is managed across posts, pages, custom post types, templates, patterns, navigation, block theme files, Elementor data, and supported ACF matches. Results include editor links when WordPress provides them." } },
-    { "@type": "Question", "name": "What does Pro add?", "acceptedAnswer": { "@type": "Answer", "text": "Pro adds Search and Replace with review, selected item replacement, before and after snippets, supported ACF field replacement, batch undo, replace history, and the global Cmd+K overlay." } },
-    { "@type": "Question", "name": "Does search leave my WordPress site?", "acceptedAnswer": { "@type": "Answer", "text": "Free search runs inside your WordPress site and does not require an external search service. License requests only happen when a Pro license key is submitted." } },
-    { "@type": "Question", "name": "Does it work with Elementor?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. WEUX Content Finder can search Elementor page data and show Edit in Elementor links when Elementor data and editor targets are available." } },
-    { "@type": "Question", "name": "How does ACF support work?", "acceptedAnswer": { "@type": "Answer", "text": "Free can show ACF match counts without exposing field values. Pro adds search and replace for supported ACF text fields." } },
-    { "@type": "Question", "name": "Is Search and Replace safe?", "acceptedAnswer": { "@type": "Answer", "text": "Pro starts with a review step. You preview replacements, read before and after snippets, choose the items to update, and confirmed jobs store snapshots for batch undo." } },
-    { "@type": "Question", "name": "Is this a database migration tool?", "acceptedAnswer": { "@type": "Answer", "text": "No. WEUX Content Finder is made for WordPress editing screens, not database migrations or serialized data replacement. It locates editable content and updates supported content layers." } },
-    { "@type": "Question", "name": "How much does Pro cost?", "acceptedAnswer": { "@type": "Answer", "text": "Pro licenses are handled via Lemon Squeezy: Single Site is €39/year, 5 Sites is €79/year, and Unlimited is €149/year." } }
-  ]
-};
 ---
 
 <!doctype html>
@@ -60,7 +62,8 @@ const faqSchema = {
     <meta name="description" content={description} />
 
     <!-- Canonical -->
-    <link rel="canonical" href={siteUrl} />
+    <link rel="canonical" href={canonicalHref} />
+    {robots && <meta name="robots" content={robots} />}
 
     <!-- Icons & Favicons -->
     <link rel="icon" href={`${baseUrl}favicon.ico`} sizes="any" />
@@ -79,8 +82,8 @@ const faqSchema = {
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={siteUrl} />
-    <meta property="og:title" content={title} />
+    <meta property="og:url" content={canonicalHref} />
+    <meta property="og:title" content={socialMetaTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={`https://contentfinderwp.com${image}`} />
     <meta property="og:image:width" content="1200" />
@@ -88,18 +91,15 @@ const faqSchema = {
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
+    <meta name="twitter:title" content={socialMetaTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={`https://contentfinderwp.com${image}`} />
 
     <!-- Structured Data: WebSite -->
-    <script type="application/ld+json" data-schema="website">{JSON.stringify(webSiteSchema)}</script>
+    {includeProductSchema && <script type="application/ld+json" data-schema="website" set:html={JSON.stringify(webSiteSchema)} />}
 
     <!-- Structured Data: SoftwareApplication -->
-    <script type="application/ld+json" data-schema="software">{JSON.stringify(softwareSchema)}</script>
-
-    <!-- Structured Data: FAQPage -->
-    <script type="application/ld+json" data-schema="faq">{JSON.stringify(faqSchema)}</script>
+    {includeProductSchema && <script type="application/ld+json" data-schema="software" set:html={JSON.stringify(softwareSchema)} />}
 
     <!-- Matomo -->
     <script is:inline>

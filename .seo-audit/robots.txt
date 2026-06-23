@@ -1,0 +1,34 @@
+robots.txt Analysis — http://localhost:4321/robots.txt
+==================================================
+Status: 200
+
+User-Agents (12):
+  *: 0 disallow, 1 allow
+  GPTBot: 0 disallow, 1 allow
+  ClaudeBot: 0 disallow, 1 allow
+  OAI-SearchBot: 0 disallow, 1 allow
+  PerplexityBot: 0 disallow, 1 allow
+  Google-Extended: 0 disallow, 1 allow
+  Applebot-Extended: 1 disallow, 0 allow
+  CCBot: 1 disallow, 0 allow
+  Bytespider: 1 disallow, 0 allow
+  meta-externalagent: 1 disallow, 0 allow
+  Amazonbot: 1 disallow, 0 allow
+  CloudflareBrowserRenderingCrawler: 1 disallow, 0 allow
+
+AI Crawler Management:
+  ℹ️ GPTBot: explicitly allowed
+  ⚠️ ChatGPT-User: not managed (inherits * rules)
+  ℹ️ ClaudeBot: explicitly allowed
+  ℹ️ PerplexityBot: explicitly allowed
+  ℹ️ Google-Extended: explicitly allowed
+  ✅ Applebot-Extended: fully blocked
+  ✅ Bytespider: fully blocked
+  ✅ CCBot: fully blocked
+  ⚠️ anthropic-ai: not managed (inherits * rules)
+  ⚠️ FacebookBot: not managed (inherits * rules)
+  ✅ Amazonbot: fully blocked
+
+Issues (2):
+  ⚠️ 3 AI crawlers not explicitly managed: ChatGPT-User, anthropic-ai, FacebookBot
+  ⚠️ No Sitemap directive found in robots.txt
