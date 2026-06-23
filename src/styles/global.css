@@ -1853,6 +1853,24 @@ footer {
   color: var(--ink-faint);
 }
 
+.footer-legal-links {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-legal-links a {
+  color: var(--ink-faint);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-color: rgb(255 255 255 / 0.2);
+  transition: color 0.2s;
+}
+
+.footer-legal-links a:hover {
+  color: #fff;
+  text-decoration-color: rgb(255 255 255 / 0.5);
+}
+
 @keyframes pulse {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.5; }

@@ -1,0 +1,116 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Imprint | WEUX Content Finder" description="Legal information about WEUX Content Finder — contact details, responsible person, and legal disclosure according to German law.">
+  <main class="legal-page">
+    <div class="wrap legal-content">
+      <a href="/" class="legal-back">← Back to Home</a>
+      <h1>Imprint</h1>
+      <p class="legal-meta">Information according to § 5 DDG (Germany)</p>
+
+      <section>
+        <h2>Responsible Operator</h2>
+        <p>
+          <strong>WEUX Studio</strong><br />
+          Marc Weidemüller<br />
+          Elisabeth-Flügge-Straße 6b<br />
+          22337 Hamburg<br />
+          Germany
+        </p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>
+          Email: hello&#64;weux.studio<br />
+          Phone: +49 178 6558623
+        </p>
+      </section>
+
+      <section>
+        <h2>VAT</h2>
+        <p>Sales tax is not shown in accordance with the small business regulation (§ 19 UStG).</p>
+      </section>
+
+      <section>
+        <h2>Responsible for Editorial Content</h2>
+        <p>Marc Weidemüller, Elisabeth-Flügge-Straße 6b, 22337 Hamburg, Germany</p>
+      </section>
+
+      <section>
+        <h2>Dispute Resolution</h2>
+        <p>
+          The European Commission provides a platform for online dispute resolution (OS):<br />
+          <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a>
+        </p>
+        <p>We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.</p>
+      </section>
+    </div>
+  </main>
+
+  <style>
+    .legal-page {
+      padding: 6rem 1.5rem 4rem;
+      min-height: 100vh;
+      background: #f7f7f7;
+    }
+    .legal-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #64748b;
+      text-decoration: none;
+      margin-bottom: 1.5rem;
+      transition: color 0.2s;
+    }
+    .legal-back:hover {
+      color: #2563eb;
+    }
+    .legal-content {
+      max-width: 42rem;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 1rem;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .legal-content h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 2rem;
+      font-weight: 500;
+      margin: 0 0 0.25rem;
+      color: #0f172a;
+    }
+    .legal-meta {
+      font-size: 0.85rem;
+      color: #64748b;
+      margin: 0 0 2rem;
+    }
+    .legal-content section {
+      margin-bottom: 1.75rem;
+    }
+    .legal-content section:last-child {
+      margin-bottom: 0;
+    }
+    .legal-content h2 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #0f172a;
+      margin: 0 0 0.5rem;
+    }
+    .legal-content p {
+      font-size: 0.9375rem;
+      line-height: 1.65;
+      color: #334155;
+      margin: 0;
+    }
+    .legal-content a {
+      color: #2563eb;
+      text-decoration: underline;
+    }
+  </style>
+</Layout>
