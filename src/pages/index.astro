@@ -6,8 +6,8 @@ import Layout from '../layouts/Layout.astro';
   <nav class="nav">
     <div class="wrap nav-inner">
       <a href="#" class="nav-logo">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-        <span>WEUX Content Finder</span>
+        <img class="nav-logo-mark" src="/header-logo-mark.svg" alt="" />
+        <img class="nav-logo-wordmark" src="/header-logo-wordmark.svg" alt="WEUX Content Finder" />
       </a>
       <div class="nav-menu">
         <a href="#problem" class="nav-link">Problem</a>
@@ -18,7 +18,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <div class="nav-cta">
         <a href="#comparison" class="btn btn-outline">Compare</a>
-        <a href="#download" class="btn btn-dark">Get Free</a>
+        <a href="https://wordpress.org/plugins/weux-content-finder/" class="btn btn-dark" target="_blank" rel="noopener noreferrer">Get Free</a>
       </div>
       <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Toggle navigation">☰</button>
     </div>
@@ -286,7 +286,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
           <div class="plan-footer">
-            <a href="#download" class="plan-cta plan-cta-outline">Download Free →</a>
+            <a href="https://wordpress.org/plugins/weux-content-finder/" class="plan-cta plan-cta-outline" target="_blank" rel="noopener noreferrer">Download Free →</a>
             <p style="text-align:center;font-size:.8125rem;color:var(--ink-faint);margin-top:12px">Install from WordPress.org</p>
           </div>
         </div>
@@ -476,7 +476,7 @@ import Layout from '../layouts/Layout.astro';
         <h2 class="h-section">Start finding content<br />faster.</h2>
         <p>Free search is available now. Pro adds Search and Replace with review steps, ACF support, and batch undo. Choose the Pro license that fits your site or agency setup.</p>
         <div class="final-cta-btns">
-          <a href="#" class="btn btn-white btn-lg">Download Free Plugin →</a>
+          <a href="https://wordpress.org/plugins/weux-content-finder/" class="btn btn-white btn-lg" target="_blank" rel="noopener noreferrer">Download Free Plugin →</a>
           <a href="#pro" class="btn btn-ghost-w btn-lg">Upgrade to Pro</a>
         </div>
         <p class="note">Install from WordPress.org · Pro licensing via Lemon Squeezy</p>
@@ -488,21 +488,28 @@ import Layout from '../layouts/Layout.astro';
         <div class="wrap">
           <div class="footer-inner">
             <div class="footer-brand">
-              <a href="#" class="nav-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="color:#fff"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><span style="color:#fff">WEUX Content Finder</span></a>
+              <a href="#" class="footer-logo" aria-label="WEUX Content Finder home">
+                <img src="/footer-logo.svg" alt="WEUX Content Finder" />
+              </a>
               <p>The WordPress content search tool for production sites. Find where content is managed and open the right editor.</p>
             </div>
             <div class="footer-cols">
               <div><h4>Product</h4><ul><li><a href="#coverage">Search Coverage</a></li><li><a href="#pro">Pro Features</a></li><li><a href="#comparison">Free vs Pro</a></li><li><a href="#usecases">Use Cases</a></li></ul></div>
               <div><h4>Resources</h4><ul><li><a href="#trust">Trust & Safety</a></li><li><a href="#faq">FAQs</a></li><li><a href="#problem">The Problem</a></li><li><a href="#workflow">How It Works</a></li></ul></div>
-              <div><h4>Get Started</h4><ul><li><a href="#download">Download Free</a></li><li><a href="#download">Upgrade to Pro</a></li><li><a href="#">WordPress.org</a></li></ul></div>
+              <div><h4>Get Started</h4><ul><li><a href="https://wordpress.org/plugins/weux-content-finder/" target="_blank" rel="noopener noreferrer">Download Free</a></li><li><a href="#download">Upgrade to Pro</a></li><li><a href="#">WordPress.org</a></li></ul></div>
             </div>
           </div>
           <div class="footer-bottom">
+<<<<<<< HEAD
             <span>© 2025 WEUX Content Finder. Built for WordPress editing screens, not database migrations.</span>
             <span class="footer-legal-links">
               <a href="/imprint/">Imprint</a>
               <a href="/privacy-policy/">Privacy Policy</a>
             </span>
+=======
+            <span>© 2026 WEUX Content Finder. Built for WordPress editing screens, not database migrations.</span>
+            <span class="footer-credit">Crafted for WordPress teams by <a href="https://weux.studio/" target="_blank" rel="noopener noreferrer"><svg width="64" height="46" viewBox="0 0 64 46" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M29.2872 11.4831L23.832 1.70528L15.7996 1.70526L25.1425 18.4519L29.2872 11.4831Z" fill="#F3D054"/><path fill-rule="evenodd" clip-rule="evenodd" d="M28.8769 10.6603L34.332 0.882529L42.3645 0.882502L33.0215 17.6291L28.8769 10.6603Z" fill="#F3D054"/><path fill-rule="evenodd" clip-rule="evenodd" d="M29.0598 24.7318L21.8841 37.5938L0.100727 0.967424L0.211486 0.882745L8.23723 0.882885L21.7021 23.5224L24.9152 17.7632L28.8314 10.5827L36.5273 23.5224L49.1583 0.882787L57.1907 0.88276L36.7093 37.5938L29.0598 24.7318Z" fill="#E8E7E7"/></svg>weux.studio</a></span>
+>>>>>>> bbba2facfeb5554dc08834d6b628ca5e6ec32840
           </div>
         </div>
       </div>
@@ -513,7 +520,10 @@ import Layout from '../layouts/Layout.astro';
     const nav = document.querySelector('.nav');
     window.addEventListener('scroll', () => {
       if (!nav) return;
-      nav.style.background = window.scrollY > 20 ? 'rgba(247,247,247,.85)' : 'rgba(247,247,247,.5)';
+      const isScrolled = window.scrollY > 20;
+      nav.style.background = isScrolled ? 'rgba(247,247,247,.9)' : 'rgba(247,247,247,.78)';
+      nav.style.boxShadow = isScrolled ? '0 12px 34px rgba(15, 23, 42, .08)' : 'none';
+      nav.style.borderColor = isScrolled ? 'rgba(0, 0, 0, .08)' : 'rgba(0, 0, 0, .06)';
     });
 
     // Active nav link based on visible section
