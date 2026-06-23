@@ -100,8 +100,49 @@ const faqSchema = {
 
     <!-- Structured Data: FAQPage -->
     <script type="application/ld+json" data-schema="faq">{JSON.stringify(faqSchema)}</script>
+
+    <!-- Matomo -->
+    <script is:inline>
+      var _paq = window._paq = window._paq || [];
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u = '//analyse.marcweidemueller.de/';
+        _paq.push(['setTrackerUrl', u + 'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d = document;
+        var g = d.createElement('script');
+        var s = d.getElementsByTagName('script')[0];
+        g.async = true;
+        g.src = u + 'matomo.js';
+        s.parentNode.insertBefore(g, s);
+      })();
+    </script>
+    <!-- End Matomo Code -->
   </head>
   <body class="font-sans text-gray-900 antialiased bg-white">
     <slot />
+    <script>
+      document.querySelectorAll('.protected-contact[data-contact-value]').forEach((item) => {
+        const encoded = item.getAttribute('data-contact-value');
+        const kind = item.getAttribute('data-contact-kind');
+        if (!encoded) return;
+
+        try {
+          const value = atob(encoded);
+          item.textContent = value;
+
+          if (item instanceof HTMLAnchorElement && kind === 'email') {
+            item.href = `mailto:${value}`;
+          }
+
+          if (item instanceof HTMLAnchorElement && kind === 'phone') {
+            item.href = `tel:${value.replace(/\s+/g, '')}`;
+          }
+        } catch {
+          item.textContent = 'Contact details unavailable';
+        }
+      });
+    </script>
   </body>
 </html>

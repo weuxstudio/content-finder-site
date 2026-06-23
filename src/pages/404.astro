@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Imprint | WEUX Content Finder" description="Legal information about WEUX Content Finder: contact details, responsible person, and legal disclosure according to German law.">
+<Layout title="Page Not Found | WEUX Content Finder" description="The page you are looking for could not be found. Return to WEUX Content Finder or download the WordPress plugin.">
   <nav class="nav">
     <div class="wrap nav-inner">
       <a href="/" class="nav-logo" aria-label="WEUX Content Finder home">
@@ -23,59 +23,30 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </nav>
 
-  <main class="legal-page">
-    <section class="legal-hero">
-      <div class="wrap legal-hero-inner">
-        <a href="/" class="legal-back">Back to home</a>
-        <span class="eyebrow">Legal</span>
-        <h1 class="h-section">Imprint</h1>
-        <p class="body-l">Information according to Section 5 DDG for WEUX Content Finder.</p>
-      </div>
-    </section>
+  <main class="not-found-page">
+    <section class="not-found-hero">
+      <div class="wrap not-found-grid">
+        <div class="not-found-copy">
+          <span class="eyebrow">404</span>
+          <h1 class="h-hero">Content not found.</h1>
+          <p class="body-l">This page moved, never existed, or was replaced. Start from the homepage or jump back into the plugin details.</p>
+          <div class="hero-ctas">
+            <a href="/" class="btn btn-blue btn-lg">Back to Home →</a>
+            <a href="/#comparison" class="btn btn-outline btn-lg">Compare Plans</a>
+          </div>
+        </div>
 
-    <section class="legal-body">
-      <div class="wrap legal-grid">
-        <aside class="legal-side">
-          <p>Operator details, contact information, and mandatory German legal disclosure.</p>
-        </aside>
-        <div class="legal-content">
-          <section>
-            <h2>Responsible Operator</h2>
-            <p>
-              <strong>WEUX Studio</strong><br />
-              Marc Weidemüller<br />
-              Elisabeth-Flügge-Straße 6b<br />
-              22337 Hamburg<br />
-              Germany
-            </p>
-          </section>
-
-          <section>
-            <h2>Contact</h2>
-            <p>
-              Email: <a href="#" class="protected-contact" data-contact-kind="email" data-contact-value="aGVsbG9Ad2V1eC5zdHVkaW8=">Reveal email</a><br />
-              Phone: <span class="protected-contact" data-contact-kind="phone" data-contact-value="KzQ5IDE3OCA2NTU4NjIz">Reveal phone</span>
-            </p>
-          </section>
-
-          <section>
-            <h2>VAT</h2>
-            <p>Sales tax is not shown in accordance with the small business regulation under Section 19 UStG.</p>
-          </section>
-
-          <section>
-            <h2>Responsible for Editorial Content</h2>
-            <p>Marc Weidemüller, Elisabeth-Flügge-Straße 6b, 22337 Hamburg, Germany</p>
-          </section>
-
-          <section>
-            <h2>Dispute Resolution</h2>
-            <p>
-              The European Commission provides a platform for online dispute resolution:<br />
-              <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a>
-            </p>
-            <p>We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.</p>
-          </section>
+        <div class="not-found-visual" aria-hidden="true">
+          <div class="not-found-orbit">
+            <svg viewBox="0 0 260 260">
+              <circle class="nf-ring" cx="116" cy="116" r="72" />
+              <path class="nf-handle" d="m171 171 52 52" />
+              <path class="nf-doc" d="M102 72h42l30 30v72H88V72h14Z" />
+              <path class="nf-fold" d="M144 72v30h30" />
+              <path class="nf-line" d="M108 122h46M108 144h54M108 166h32" />
+            </svg>
+            <span class="nf-badge">404</span>
+          </div>
         </div>
       </div>
     </section>
