@@ -2,98 +2,149 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Terms of Service | WEUX Content Finder" description="Terms and conditions for WEUX Content Finder — license terms, usage rules, liability, and governing law for our WordPress plugin.">
-  <main class="legal-page">
-    <div class="wrap legal-content">
-      <a href="/" class="legal-back">← Back to Home</a>
-      <h1>Terms of Service</h1>
-      <p class="legal-meta">Last updated: June 2026</p>
-
-      <section>
-        <h2>1. Scope</h2>
-        <p>These Terms of Service govern the use of WEUX Content Finder (the "Plugin"), a WordPress plugin developed and provided by WEUX Studio, Marc Weidemüller, Elisabeth-Flügge-Straße 6b, 22337 Hamburg, Germany ("we", "us", "our").</p>
-        <p>By downloading, installing, or purchasing a license for the Plugin, you ("Customer") accept these terms in full.</p>
-      </section>
-
-      <section>
-        <h2>2. Free Version</h2>
-        <p>The free version of WEUX Content Finder is available on WordPress.org under the GPLv2 or later license. It may be downloaded, installed, and used on any WordPress site without a license key and without charge. The free version is provided "as is" with no warranty or support obligation beyond what is stated in the GPL.</p>
-      </section>
-
-      <section>
-        <h2>3. Pro License</h2>
-        <p>The Pro version of WEUX Content Finder requires a paid license. Licenses are issued per website installation and are available in three tiers:</p>
-        <ul>
-          <li><strong>Single Site (€39/year):</strong> One production WordPress site.</li>
-          <li><strong>5 Sites (€79/year):</strong> Up to five production WordPress sites.</li>
-          <li><strong>Agency Unlimited (€149/year):</strong> Unlimited production WordPress sites.</li>
-        </ul>
-        <p>Each Pro license is valid for one year from the date of purchase and renews automatically unless cancelled before the renewal date. You may use the Pro version on staging and development sites in addition to your licensed production sites at no extra cost.</p>
-      </section>
-
-      <section>
-        <h2>4. License Key</h2>
-        <p>Upon purchasing a Pro license, you will receive a license key. This key is personal to you and may not be shared, resold, or distributed. You are responsible for keeping your license key confidential. WEUX Studio may revoke a license key if these terms are violated.</p>
-      </section>
-
-      <section>
-        <h2>5. Updates and Support</h2>
-        <p>An active Pro license entitles you to all Plugin updates during the license period. Support is provided via email (hello@weux.studio) on a best-effort basis. Support does not include custom modifications to the Plugin or third-party integrations beyond those documented.</p>
-      </section>
-
-      <section>
-        <h2>6. Refund Policy</h2>
-        <p>If the Pro version does not meet your expectations, you may request a full refund within 14 days of purchase, provided the license key has not been activated on a production site. If the license key has been activated, refunds are handled on a case-by-case basis. To request a refund, contact hello@weux.studio.</p>
-        <p>After the 14-day period, no refunds will be issued for renewal payments. Subscription cancellations must be made before the next billing date to avoid being charged.</p>
-      </section>
-
-      <section>
-        <h2>7. Limitation of Liability</h2>
-        <p>The Plugin is provided "as is" without warranty of any kind, express or implied. WEUX Studio shall not be liable for any direct, indirect, incidental, special, or consequential damages arising from the use or inability to use the Plugin, including but not limited to data loss or website downtime.</p>
-        <p>This limitation of liability does not apply in cases of intentional misconduct or gross negligence by WEUX Studio or where liability cannot be excluded by applicable law (including the German Product Liability Act).</p>
-      </section>
-
-      <section>
-        <h2>8. Third-Party Services</h2>
-        <p>License activation and validation requests are sent to Lemon Squeezy (hello@lemonsqueezy.com). No other third-party services are contacted during normal operation of the Plugin. Lemon Squeezy's terms and privacy policy apply to the license activation process.</p>
-      </section>
-
-      <section>
-        <h2>9. Governing Law</h2>
-        <p>These terms are governed by the laws of the Federal Republic of Germany. If you are a consumer, statutory provisions of your country of residence remain unaffected. The UN Convention on Contracts for the International Sale of Goods (CISG) does not apply.</p>
-      </section>
-
-      <section>
-        <h2>10. Changes</h2>
-        <p>We reserve the right to update these Terms of Service at any time. Customers will be notified of material changes via email. Continued use of the Plugin after changes constitutes acceptance of the updated terms.</p>
-      </section>
-
-      <section>
-        <h2>11. Contact</h2>
-        <p>
-          WEUX Studio — Marc Weidemüller<br />
-          Email: hello@weux.studio<br />
-          Elisabeth-Flügge-Straße 6b<br />
-          22337 Hamburg, Germany
-        </p>
-      </section>
+<Layout
+  title="Terms of Service | WEUX Content Finder"
+  description="Terms and conditions for WEUX Content Finder: license terms, usage rules, liability, and governing law for the WordPress plugin."
+  canonicalPath="/terms/"
+  robots="noindex,follow"
+>
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a href="/" class="nav-logo" aria-label="WEUX Content Finder home">
+        <img class="nav-logo-mark" src="/header-logo-mark.svg" alt="" />
+        <img class="nav-logo-wordmark" src="/header-logo-wordmark.svg" alt="WEUX Content Finder" />
+      </a>
+      <div class="nav-menu">
+        <a href="/#problem" class="nav-link">Problem</a>
+        <a href="/#coverage" class="nav-link">Coverage</a>
+        <a href="/#pro" class="nav-link">Pro</a>
+        <a href="/#comparison" class="nav-link">Free vs Pro</a>
+        <a href="/#usecases" class="nav-link">Use Cases</a>
+      </div>
+      <div class="nav-cta">
+        <a href="/#comparison" class="btn btn-outline">Compare</a>
+        <a href="https://wordpress.org/plugins/weux-content-finder/" class="btn btn-dark" target="_blank" rel="noopener noreferrer">Get Free</a>
+      </div>
     </div>
+  </nav>
+
+  <main class="legal-page">
+    <section class="legal-hero">
+      <div class="wrap legal-hero-inner">
+        <a href="/" class="legal-back">Back to home</a>
+        <span class="eyebrow">Legal</span>
+        <h1 class="h-section">Terms of Service</h1>
+        <p class="body-l">License terms, usage rules, liability, and governing law for WEUX Content Finder.</p>
+        <p class="legal-meta">Last updated: June 2026</p>
+      </div>
+    </section>
+
+    <section class="legal-body">
+      <div class="wrap legal-grid">
+        <aside class="legal-side">
+          <p>These terms apply to the Free and Pro versions of WEUX Content Finder, including licensing, support, renewals, and liability.</p>
+        </aside>
+        <div class="legal-content">
+          <section>
+            <h2>1. Scope</h2>
+            <p>These Terms of Service govern the use of WEUX Content Finder, a WordPress plugin developed and provided by WEUX Studio, Marc Weidemüller, Elisabeth-Flügge-Straße 6b, 22337 Hamburg, Germany.</p>
+            <p>By downloading, installing, or purchasing a license for the plugin, you accept these terms in full.</p>
+          </section>
+
+          <section>
+            <h2>2. Free Version</h2>
+            <p>The free version of WEUX Content Finder is available on WordPress.org under the GPLv2 or later license. It may be downloaded, installed, and used on any WordPress site without a license key and without charge.</p>
+            <p>The free version is provided as is, with no warranty or support obligation beyond what is stated in the GPL.</p>
+          </section>
+
+          <section>
+            <h2>3. Pro License</h2>
+            <p>The Pro version of WEUX Content Finder requires a paid license. Licenses are issued per website installation and are available in three tiers:</p>
+            <ul>
+              <li><strong>Single Site (€39/year):</strong> one production WordPress site.</li>
+              <li><strong>5 Sites (€79/year):</strong> up to five production WordPress sites.</li>
+              <li><strong>Unlimited (€149/year):</strong> unlimited production WordPress sites.</li>
+            </ul>
+            <p>Each Pro license is valid for one year from the date of purchase and renews automatically unless cancelled before the renewal date. You may use the Pro version on staging and development sites in addition to your licensed production sites at no extra cost.</p>
+          </section>
+
+          <section>
+            <h2>4. License Key</h2>
+            <p>Upon purchasing a Pro license, you will receive a license key. This key is personal to you and may not be shared, resold, or distributed. You are responsible for keeping your license key confidential.</p>
+            <p>WEUX Studio may revoke a license key if these terms are violated.</p>
+          </section>
+
+          <section>
+            <h2>5. Updates and Support</h2>
+            <p>An active Pro license entitles you to all plugin updates during the license period. Support is provided via email on a best-effort basis.</p>
+            <p>Support does not include custom modifications to the plugin or third-party integrations beyond those documented.</p>
+          </section>
+
+          <section>
+            <h2>6. Refund Policy</h2>
+            <p>If the Pro version does not meet your expectations, you may request a full refund within 14 days of purchase, provided the license key has not been activated on a production site.</p>
+            <p>If the license key has been activated, refunds are handled on a case-by-case basis. After the 14-day period, no refunds will be issued for renewal payments.</p>
+            <p><a href="/refund-policy/">Read the full refund policy</a>.</p>
+          </section>
+
+          <section>
+            <h2>7. Limitation of Liability</h2>
+            <p>The plugin is provided as is without warranty of any kind, express or implied. WEUX Studio shall not be liable for any direct, indirect, incidental, special, or consequential damages arising from the use or inability to use the plugin, including data loss or website downtime.</p>
+            <p>This limitation of liability does not apply in cases of intentional misconduct or gross negligence by WEUX Studio, or where liability cannot be excluded by applicable law.</p>
+          </section>
+
+          <section>
+            <h2>8. Third-Party Services</h2>
+            <p>License activation and validation requests are handled through Lemon Squeezy. Lemon Squeezy's terms and privacy policy apply to the license activation and checkout process.</p>
+          </section>
+
+          <section>
+            <h2>9. Governing Law</h2>
+            <p>These terms are governed by the laws of the Federal Republic of Germany. If you are a consumer, statutory provisions of your country of residence remain unaffected. The UN Convention on Contracts for the International Sale of Goods (CISG) does not apply.</p>
+          </section>
+
+          <section>
+            <h2>10. Changes</h2>
+            <p>We reserve the right to update these Terms of Service at any time. Customers will be notified of material changes via email where required. Continued use of the plugin after changes constitutes acceptance of the updated terms.</p>
+          </section>
+
+          <section>
+            <h2>11. Contact</h2>
+            <p>
+              WEUX Studio — Marc Weidemüller<br />
+              Email: <a href="#" class="protected-contact" data-contact-kind="email" data-contact-value="aGVsbG9Ad2V1eC5zdHVkaW8=">Reveal email</a><br />
+              Elisabeth-Flügge-Straße 6b<br />
+              22337 Hamburg, Germany
+            </p>
+          </section>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <style>
-    .legal-page { padding: 6rem 1.5rem 4rem; min-height: 100vh; background: #f7f7f7; }
-    .legal-back { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; font-weight: 600; color: #64748b; text-decoration: none; margin-bottom: 1.5rem; transition: color 0.2s; }
-    .legal-back:hover { color: #2563eb; }
-    .legal-content { max-width: 42rem; margin: 0 auto; background: #fff; border-radius: 1rem; padding: 2.5rem 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
-    .legal-content h1 { font-family: 'Fraunces', Georgia, serif; font-size: 2rem; font-weight: 500; margin: 0 0 0.25rem; color: #0f172a; }
-    .legal-meta { font-size: 0.85rem; color: #64748b; margin: 0 0 2rem; }
-    .legal-content section { margin-bottom: 1.75rem; }
-    .legal-content section:last-child { margin-bottom: 0; }
-    .legal-content h2 { font-family: 'Fraunces', Georgia, serif; font-size: 1.2rem; font-weight: 500; color: #0f172a; margin: 0 0 0.5rem; }
-    .legal-content p { font-size: 0.9375rem; line-height: 1.65; color: #334155; margin: 0 0 0.5rem; }
-    .legal-content p:last-child { margin-bottom: 0; }
-    .legal-content ul { margin: 0.5rem 0; padding-left: 1.25rem; font-size: 0.9375rem; line-height: 1.65; color: #334155; }
-    .legal-content li { margin-bottom: 0.25rem; }
-    .legal-content a { color: #2563eb; text-decoration: underline; }
-  </style>
+  <div class="cta-footer legal-footer">
+    <footer>
+      <div class="footer-shell">
+        <div class="wrap">
+          <div class="footer-inner">
+            <div class="footer-brand">
+              <a href="/" class="footer-logo" aria-label="WEUX Content Finder home">
+                <img src="/footer-logo.svg" alt="WEUX Content Finder" />
+              </a>
+              <p>The WordPress content search tool for production sites. Find where content is managed and open the right editor.</p>
+            </div>
+            <div class="footer-cols">
+              <div><h4>Product</h4><ul><li><a href="/#coverage">Search Coverage</a></li><li><a href="/#pro">Pro Features</a></li><li><a href="/#comparison">Free vs Pro</a></li><li><a href="/#usecases">Use Cases</a></li></ul></div>
+              <div><h4>Resources</h4><ul><li><a href="/#trust">Trust & Safety</a></li><li><a href="/#faq">FAQs</a></li><li><a href="/#problem">The Problem</a></li><li><a href="/#workflow">How It Works</a></li></ul></div>
+              <div><h4>Get Started</h4><ul><li><a href="https://wordpress.org/plugins/weux-content-finder/" target="_blank" rel="noopener noreferrer">Download Free</a></li><li><a href="/#download">Upgrade to Pro</a></li><li><a href="https://wordpress.org/plugins/weux-content-finder/" target="_blank" rel="noopener noreferrer">WordPress.org</a></li></ul></div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <span class="footer-copyright">© 2026 WEUX Content Finder. Built for WordPress editing screens, not database migrations. <span class="footer-legal-links"><a href="/imprint/">Imprint</a><a href="/terms/">Terms of Service</a><a href="/refund-policy/">Refund Policy</a><a href="/privacy-policy/">Privacy Policy</a></span></span>
+            <span class="footer-credit-text">Crafted for WordPress teams by <a href="https://weux.studio/" target="_blank" rel="noopener noreferrer" class="footer-credit"><svg width="64" height="46" viewBox="0 0 64 46" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M29.2872 11.4831L23.832 1.70528L15.7996 1.70526L25.1425 18.4519L29.2872 11.4831Z" fill="#F3D054"/><path fill-rule="evenodd" clip-rule="evenodd" d="M28.8769 10.6603L34.332 0.882529L42.3645 0.882502L33.0215 17.6291L28.8769 10.6603Z" fill="#F3D054"/><path fill-rule="evenodd" clip-rule="evenodd" d="M29.0598 24.7318L21.8841 37.5938L0.100727 0.967424L0.211486 0.882745L8.23723 0.882885L21.7021 23.5224L24.9152 17.7632L28.8314 10.5827L36.5273 23.5224L49.1583 0.882787L57.1907 0.88276L36.7093 37.5938L29.0598 24.7318Z" fill="#E8E7E7"/></svg>weux.studio</a></span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
 </Layout>
