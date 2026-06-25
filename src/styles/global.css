@@ -2235,13 +2235,29 @@ footer {
 }
 
 .footer-credit {
-  background:
-    radial-gradient(circle at 78% 14%, rgb(37 99 235 / 0.1), transparent 32rem),
-    linear-gradient(180deg, #fff 0%, #f7f7f7 100%);
-  padding-top: 72px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgb(255 255 255 / 0.78);
+  text-decoration: none;
+  line-height: 1;
+}
+
+.footer-credit svg {
+  width: 18px;
+  height: 13px;
+  flex: 0 0 auto;
+  transform: translateY(1px);
+}
+
+.footer-credit:hover {
+  color: #fff;
 }
 
 .legal-hero {
+  background:
+    radial-gradient(circle at 78% 14%, rgb(37 99 235 / 0.1), transparent 32rem),
+    linear-gradient(180deg, #fff 0%, #f7f7f7 100%);
   padding: 92px 0 56px;
 }
 
