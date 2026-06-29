@@ -1,5 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const lemonSqueezyMode = import.meta.env.PUBLIC_LEMONSQUEEZY_MODE === 'test' ? 'test' : 'live';
+const lemonSqueezySlugs = {
+  live: {
+    single: '5f8dfa8c-7738-499a-b3e2-8cb4cb61be15',
+    five: '6b81572c-7e62-4a29-8480-8a705e4f3cc9',
+    unlimited: '14e1279d-721b-47e4-be1a-18eabc53bbc7',
+  },
+  test: {
+    single: 'dee9e7b0-e7f6-4f99-836a-b16df4efdc4a',
+    five: '16396270-4052-4e5e-8d3a-204f06b6d0f3',
+    unlimited: '46bf8bf1-c5bf-42d3-8f96-cdb3c82a2d27',
+  },
+};
+const checkoutBaseUrl = 'https://weuxstudio.lemonsqueezy.com/checkout/buy';
+const checkoutSlugs = lemonSqueezySlugs[lemonSqueezyMode];
+const checkoutUrls = {
+  single: `${checkoutBaseUrl}/${checkoutSlugs.single}?embed=1`,
+  five: `${checkoutBaseUrl}/${checkoutSlugs.five}?embed=1`,
+  unlimited: `${checkoutBaseUrl}/${checkoutSlugs.unlimited}?embed=1`,
+};
 ---
 
 <Layout
@@ -312,7 +333,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
           <div class="plan-footer-dark">
-            <a href="#pro" class="plan-cta">Upgrade to Pro →</a>
+            <a href={checkoutUrls.single} class="plan-cta lemonsqueezy-button">Upgrade to Pro →</a>
             <p class="plan-license-note">License via Lemon Squeezy</p>
           </div>
         </div>
@@ -331,7 +352,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
           <div class="plan-footer-dark">
-            <a href="#pro" class="plan-cta">Upgrade to Pro →</a>
+            <a href={checkoutUrls.five} class="plan-cta lemonsqueezy-button">Upgrade to Pro →</a>
             <p class="plan-license-note">License via Lemon Squeezy</p>
           </div>
         </div>
@@ -350,7 +371,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
           <div class="plan-footer-dark">
-            <a href="#pro" class="plan-cta">Upgrade to Pro →</a>
+            <a href={checkoutUrls.unlimited} class="plan-cta lemonsqueezy-button">Upgrade to Pro →</a>
             <p class="plan-license-note">License via Lemon Squeezy</p>
           </div>
         </div>
@@ -614,4 +635,5 @@ import Layout from '../layouts/Layout.astro';
       });
     });
   </script>
+  <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
 </Layout>
