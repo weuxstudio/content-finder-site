@@ -35,8 +35,33 @@ All commands are run from the root of the project, from a terminal:
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
 | `npm run build`           | Build your production site to `./dist/`          |
 | `npm run preview`         | Preview your build locally, before deploying     |
+| `npm test`                | Run API function tests                           |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## Pro update API
+
+The Cloudflare Pages Functions under `/api/weux-content-finder/pro/*` power the WEUX Content Finder Pro updater.
+
+Required Cloudflare environment variables:
+
+- `LEMONSQUEEZY_API_KEY`
+- `LEMONSQUEEZY_PRODUCT_ID`
+- `PRO_DOWNLOAD_TOKEN_SECRET`
+
+Optional environment variables:
+
+- `PRO_CHANGELOG_HTML`
+- `PRO_MIN_WP_VERSION` defaults to `7.0`
+- `PRO_TESTED_WP_VERSION` defaults to `7.0`
+- `PRO_MIN_PHP_VERSION` defaults to `8.0`
+
+Release flow:
+
+1. Upload the Pro ZIP to the matching Lemon Squeezy variant file.
+2. Publish the file and set its version in Lemon Squeezy.
+3. Deploy this site with the production Lemon Squeezy API key and product ID.
+4. The updater validates the license, finds the latest published ZIP for the purchased variant, and redirects downloads to Lemon Squeezy signed download URLs.
 
 ## 👀 Want to learn more?
 
