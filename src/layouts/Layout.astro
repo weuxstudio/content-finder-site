@@ -27,6 +27,7 @@ const socialMetaTitle = socialTitle ?? title;
 const wordpressPluginUrl = 'https://wordpress.org/plugins/weux-content-finder/';
 const studioUrl = 'https://weux.studio/';
 const dateModified = '2026-06-23';
+const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-EG9RZDSGL4';
 
 // --- Structured Data ---
 
@@ -113,6 +114,7 @@ const softwareSchema = {
 
     <!-- Fonts -->
     <!-- Self-hosted via global.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.css" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -135,24 +137,6 @@ const softwareSchema = {
     <!-- Structured Data: SoftwareApplication -->
     {includeProductSchema && <script type="application/ld+json" data-schema="software" set:html={JSON.stringify(softwareSchema)} />}
 
-    <!-- Matomo -->
-    <script is:inline>
-      var _paq = window._paq = window._paq || [];
-      _paq.push(['trackPageView']);
-      _paq.push(['enableLinkTracking']);
-      (function() {
-        var u = '//analyse.marcweidemueller.de/';
-        _paq.push(['setTrackerUrl', u + 'matomo.php']);
-        _paq.push(['setSiteId', '2']);
-        var d = document;
-        var g = d.createElement('script');
-        var s = d.getElementsByTagName('script')[0];
-        g.async = true;
-        g.src = u + 'matomo.js';
-        s.parentNode.insertBefore(g, s);
-      })();
-    </script>
-    <!-- End Matomo Code -->
   </head>
   <body class="font-sans text-gray-900 antialiased bg-white">
     <slot />
@@ -176,6 +160,113 @@ const softwareSchema = {
         } catch {
           item.textContent = 'Contact details unavailable';
         }
+      });
+    </script>
+    <script is:inline src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.umd.js"></script>
+    <script is:inline define:vars={{ gaMeasurementId }}>
+      const CookieConsent = window.CookieConsent;
+      const loaded = {
+        googleAnalytics: false,
+      };
+
+      const loadScript = (src) => {
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = src;
+        document.head.appendChild(script);
+      };
+
+      const loadGoogleAnalytics = () => {
+        if (!gaMeasurementId || loaded.googleAnalytics) return;
+
+        loaded.googleAnalytics = true;
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function gtag() {
+          window.dataLayer.push(arguments);
+        };
+        window.gtag('js', new Date());
+        window.gtag('config', gaMeasurementId, {
+          anonymize_ip: true,
+        });
+        loadScript(`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(gaMeasurementId)}`);
+      };
+
+      const eraseAnalyticsCookies = () => {
+        CookieConsent.eraseCookies(['_gid', '_gat', /^_ga/]);
+      };
+
+      const applyAnalyticsConsent = () => {
+        if (CookieConsent.acceptedCategory('analytics')) {
+          loadGoogleAnalytics();
+          return;
+        }
+
+        eraseAnalyticsCookies();
+      };
+
+      CookieConsent.run({
+        cookie: {
+          name: 'contentfinder_cookie_consent',
+          expiresAfterDays: 182,
+          sameSite: 'Lax',
+        },
+        guiOptions: {
+          consentModal: {
+            layout: 'box wide',
+            position: 'bottom right',
+          },
+          preferencesModal: {
+            layout: 'box',
+          },
+        },
+        categories: {
+          necessary: {
+            enabled: true,
+            readOnly: true,
+          },
+          analytics: {},
+        },
+        onConsent: applyAnalyticsConsent,
+        onChange: applyAnalyticsConsent,
+        language: {
+          default: 'en',
+          translations: {
+            en: {
+              consentModal: {
+                title: 'Cookie preferences',
+                description: 'We use necessary cookies for this website and optional analytics to understand how visitors use it. Analytics only runs if you allow it.',
+                acceptAllBtn: 'Accept all',
+                acceptNecessaryBtn: 'Reject optional',
+                showPreferencesBtn: 'Manage preferences',
+                footer: '<a href="/privacy-policy/">Privacy Policy</a>',
+              },
+              preferencesModal: {
+                title: 'Cookie preferences',
+                acceptAllBtn: 'Accept all',
+                acceptNecessaryBtn: 'Reject optional',
+                savePreferencesBtn: 'Save preferences',
+                closeIconLabel: 'Close',
+                sections: [
+                  {
+                    title: 'Necessary cookies',
+                    description: 'Required for the cookie banner and core website functionality.',
+                    linkedCategory: 'necessary',
+                  },
+                  {
+                    title: 'Analytics',
+                    description: 'Helps us measure page views and improve the website. This uses Google Analytics.',
+                    linkedCategory: 'analytics',
+                  },
+                ],
+              },
+            },
+          },
+        },
+      });
+
+      window.openCookiePreferences = () => CookieConsent.showPreferences();
+      document.querySelectorAll('[data-cookie-preferences]').forEach((button) => {
+        button.addEventListener('click', () => CookieConsent.showPreferences());
       });
     </script>
   </body>

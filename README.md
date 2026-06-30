@@ -63,6 +63,12 @@ Release flow:
 3. Deploy this site with the production Lemon Squeezy API key and product ID.
 4. The updater validates the license, finds the latest published ZIP for the purchased variant, and redirects downloads to Lemon Squeezy signed download URLs.
 
+## Analytics and cookie consent
+
+Google Analytics is loaded only after analytics consent. The default measurement ID is `G-EG9RZDSGL4`. Override it at build time with:
+
+- `PUBLIC_GA_MEASUREMENT_ID`
+
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
