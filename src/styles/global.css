@@ -2224,13 +2224,21 @@ footer {
   gap: 12px;
 }
 
-.footer-legal-links a {
+.footer-legal-links a,
+.footer-legal-links button {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  background: transparent;
   color: rgb(255 255 255 / 0.32);
+  font: inherit;
   text-decoration: none;
   transition: color 0.2s;
+  cursor: pointer;
 }
 
-.footer-legal-links a:hover {
+.footer-legal-links a:hover,
+.footer-legal-links button:hover {
   color: rgb(255 255 255 / 0.62);
 }
 
